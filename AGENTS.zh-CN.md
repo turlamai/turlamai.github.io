@@ -7,7 +7,7 @@
 
 [English](AGENTS.md) · **简体中文**
 
-turinglambdaai 家族主站（jrtx.site）——纯静态 HTML/CSS 单页，零依赖零构建，GitHub Pages 直出。
+TurLamAI 家族主站（jrtx.site）——纯静态 HTML/CSS 单页，零依赖零构建，GitHub Pages 直出。
 
 ## 结构
 
