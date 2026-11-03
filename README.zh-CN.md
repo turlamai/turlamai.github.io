@@ -2,8 +2,6 @@
 
 **TurLamAI** 的门面主页 — 上线于 **[jrtx.site](https://jrtx.site)**。帮助用户找到独立开发的桌面工具、技术写作与可复用基础库，围绕同一个理念：把复杂技术做直观。
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-
 [English](README.md) · **中文**
 
 ---
@@ -38,7 +36,7 @@
 - **中英双语** — 完整的中 / 英文切换，自动识别浏览器语言
 - **明暗主题** — 跟随系统偏好，可手动切换，跨次访问保持记忆
 - **按用途展示产品** — 日常效率、阅读、工程与社区分别组织，写作和开发基础库独立分区
-- **统一设计系统** — Anthropic 风格的暖色调
+- **统一设计变量** — 字体、间距、明暗对比一致，无需引入第三方样式服务
 - **零依赖** — 纯手写 HTML/CSS 加一层极简 vanilla-JS 国际化，无需构建
 - **响应式** — 从桌面到移动端布局自适应
 
@@ -63,14 +61,10 @@ cd turlamai.github.io
 
 ### 2. 运行
 
-无需构建。直接打开 `index.html`，或起一个本地静态服务：
+无需构建或安装依赖。直接打开 `index.html`，或用 Python 启动本地静态服务：
 
 ```bash
-# 方式一：Python
 python -m http.server 8000
-
-# 方式二：Node
-npx serve
 ```
 
 然后访问 http://localhost:8000。
