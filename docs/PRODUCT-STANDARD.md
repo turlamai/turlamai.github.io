@@ -12,6 +12,8 @@ Follow the [English/Chinese language policy](DOCUMENTATION-LANGUAGES.md) / [中�
 
 At every bounded slice boundary, safely refresh repository state, re-read the root AGENTS file and local implementation handoff, then read this standard, the [language policy](DOCUMENTATION-LANGUAGES.md) and [portfolio](../PORTFOLIO.md). Record the repository starting SHA and central-policy commit/revision actually read in the PR or handoff. A stale checkout or existing conversation does not automatically receive policy changes; a link alone is not an agent acknowledgement. Preserve another writer's dirty worktree and use isolation where needed. If policy inputs are offline or missing, mark them unverified rather than claiming current adoption. Keep product behavior, normative protocols and active implementation queues with their existing owners.
 
+For exact GitHub Release asset inventories, versioned download links, checksums, signed feeds and native-package acceptance, also follow the [release engineering standard](RELEASE-STANDARD.md) / [中文版](RELEASE-STANDARD.zh-CN.md). A merged workflow is not an accepted tagged installer.
+
 ## Publisher identity and release-channel decisions
 
 For every packaging, release, update or commercial slice, read the current
