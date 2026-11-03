@@ -2,8 +2,6 @@
 
 The front door of **TurLamAI** — live at **[jrtx.site](https://jrtx.site)**. It helps people find independent desktop tools, writing and reusable libraries, around one idea: make complex technology intuitive.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-
 **English** · [中文](README.zh-CN.md)
 
 ---
@@ -38,7 +36,7 @@ Most applications remain development previews. Each page and paired user guide d
 - **Bilingual** — full Chinese / English toggle with automatic browser-language detection
 - **Light & dark themes** — follows the system preference, manually switchable, remembered across visits
 - **Outcome-first catalog** — products by everyday tasks, reading, engineering and community; writing and developer libraries have separate sections
-- **Shared design system** — an Anthropic-inspired warm palette
+- **Shared design tokens** — consistent typography, spacing, and light/dark contrast without third-party styling services
 - **Zero dependencies** — hand-written HTML/CSS with a small vanilla-JS i18n layer; no build step
 - **Responsive** — lays out cleanly from desktop down to mobile
 
@@ -63,14 +61,10 @@ cd turlamai.github.io
 
 ### 2. Run
 
-There is no build step. Either open `index.html` directly, or serve the directory:
+There is no build step or dependency installation. Open `index.html` directly, or serve the directory using Python:
 
 ```bash
-# Option A: Python
 python -m http.server 8000
-
-# Option B: Node
-npx serve
 ```
 
 Then open http://localhost:8000.
