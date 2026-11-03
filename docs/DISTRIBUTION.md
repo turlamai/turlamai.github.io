@@ -4,6 +4,8 @@
 
 Decision revision: **2026-10-23-v1**. Adopted portfolio planning policy; no account, certificate, Store submission or production signing has been completed by this decision. Platform eligibility must be checked again before enrollment and submission. This document owns shared publisher/channel decisions; product release documents own executable procedures and evidence.
 
+For the technical artifact naming, verification and GitHub Release gates of each supported distribution channel, follow the [release engineering standard](RELEASE-STANDARD.md) / [中文](RELEASE-STANDARD.zh-CN.md). That engineering contract does not relax publisher signing or Store admission conditions below.
+
 ## Decision and purchase timing
 
 Do not purchase developer memberships or signing certificates during the current development stage. Continue local builds, domain tests, packaging, installation, backup/restore and update-protocol validation without production credentials. A development artifact is not evidence of publisher-trusted public distribution.
