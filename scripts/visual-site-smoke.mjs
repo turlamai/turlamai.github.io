@@ -76,8 +76,19 @@ try {
             const style = getComputedStyle(el);
             if (style.display === "none" || style.visibility === "hidden") return false;
             const rect = el.getBoundingClientRect();
-            return rect.width > 0 && rect.height > 0 &&
-              (rect.right > window.innerWidth + 2 || rect.left < -2);
+            if (!(rect.width > 0 && rect.height > 0 &&
+                (rect.right > window.innerWidth + 2 || rect.left < -2))) return false;
+            // A wide table or snippet nested inside an intentionally scrollable
+            // viewport does not itself widen the page: ignore descendants
+            // outside that ancestor's clipping rectangle in this *diagnostic*.
+            // The document scrollWidth assertion remains unchanged and strict.
+            for (let parent = el.parentElement; parent; parent = parent.parentElement) {
+              const overflow = getComputedStyle(parent).overflowX;
+              if (!["hidden", "clip", "scroll", "auto"].includes(overflow)) continue;
+              const limit = parent.getBoundingClientRect();
+              if (rect.right > limit.right + 1 || rect.left < limit.left - 1) return false;
+            }
+            return true;
           }).map(el => {
             const rect = el.getBoundingClientRect();
             return {
