@@ -110,7 +110,7 @@ const summary = [
   "",
   "Captured against the deployed public domains; does not verify packaged app UI.",
   "Language states are exercised via HTML lang; the site's language switch still requires manual testing.",
-  "This checks geometry, image load, heading, HTTP status and stores two theme/locale screenshot sets.",
+  "This checks geometry, image load, heading, HTTP status and stores three combined theme/locale screenshot sets.",
   "It does not establish usability or visual approval; review the screenshot artifact.",
   "",
   "| Site | HTTP | Showcase | Checks |",
