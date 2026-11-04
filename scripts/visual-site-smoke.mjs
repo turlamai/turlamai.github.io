@@ -70,12 +70,30 @@ try {
             getComputedStyle(document.querySelector("#visual-showcase")).display !== "none",
           brokenImages: [...document.images].filter(i => i.complete && i.naturalWidth === 0)
             .map(i => i.currentSrc || i.src).slice(0, 8),
+          // Diagnose concrete overflowing DOM elements; do not mask overflow
+          // with an overflow-x:hidden band-aid that hides controls.
+          overflowElements: [...document.querySelectorAll("body *")].filter(el => {
+            const style = getComputedStyle(el);
+            if (style.display === "none" || style.visibility === "hidden") return false;
+            const rect = el.getBoundingClientRect();
+            return rect.width > 0 && rect.height > 0 &&
+              (rect.right > window.innerWidth + 2 || rect.left < -2);
+          }).map(el => {
+            const rect = el.getBoundingClientRect();
+            return {
+              element: el.localName + (el.id ? "#" + el.id : "") +
+                [...el.classList].slice(0, 3).map(cls => "." + cls).join(""),
+              x: Math.round(rect.x), right: Math.round(rect.right),
+              width: Math.round(rect.width), text: (el.textContent || "").replace(/\\s+/g, " ").slice(0, 64)
+            };
+          }).sort((a, b) => b.right - a.right).slice(0, 18),
           lang: document.documentElement.lang
         }));
         const record = { variant: v.name, ...dimensions, errors: [] };
         if (!dimensions.heading) record.errors.push("missing nonempty h1");
         if (dimensions.documentWidth > dimensions.viewport + 2) {
-          record.errors.push("horizontal overflow: " + dimensions.documentWidth + "px vs " + dimensions.viewport + "px viewport");
+          record.errors.push("horizontal overflow: " + dimensions.documentWidth + "px vs " + dimensions.viewport + "px viewport; first offenders: " +
+            JSON.stringify(dimensions.overflowElements.slice(0, 8)));
         }
         if (dimensions.brokenImages.length) {
           record.errors.push("broken images: " + dimensions.brokenImages.join(", "));
