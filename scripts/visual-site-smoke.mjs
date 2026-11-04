@@ -84,7 +84,7 @@ try {
               element: el.localName + (el.id ? "#" + el.id : "") +
                 [...el.classList].slice(0, 3).map(cls => "." + cls).join(""),
               x: Math.round(rect.x), right: Math.round(rect.right),
-              width: Math.round(rect.width), text: (el.textContent || "").replace(/\\s+/g, " ").slice(0, 64)
+              width: Math.round(rect.width), text: (el.textContent || "").replace(/\s+/g, " ").slice(0, 64)
             };
           }).sort((a, b) => b.right - a.right).slice(0, 18),
           lang: document.documentElement.lang
