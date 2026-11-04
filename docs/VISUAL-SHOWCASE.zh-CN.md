@@ -50,4 +50,4 @@
 
 ## 首轮推进（2026-11-04）
 
-以下均为**待审 PR，不代表已合并或已部署**：Taskly #106、Booklight #44、Fulcrum #182、Movebit #129、Publy #71、PodLens #43、Autarx #42、FlashPilot #28、gPTP Studio #62、Rivet #413、Glaze #100、SyncPilot #28、Payback #54、RelayPilot #8。现阶段主要采用明确标注的概念图，因为既有截图已随界面迭代而过时。后续需完成真实浏览器布局检查、合并、部署，并在 UI 稳定后逐步替换为有版本依据的真实截图。
+以下均为**待审 PR，不代表已合并或已部署**：Taskly #106、Booklight #44、Fulcrum #182、Movebit #129、Publy #71、PodLens #43、Autarx #42、FlashPilot #28、gPTP Studio #62、Rivet #413、Glaze #100、SyncPilot #28、Payback #54、RelayPilot #8、HackDigest #24、RegexMate #27、Keyward #23、Threadly #13。现阶段主要采用明确标注的概念图，因为既有截图已随界面迭代而过时。后续需完成真实浏览器布局检查、合并、部署，并在 UI 稳定后逐步替换为有版本依据的真实截图。
