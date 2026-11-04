@@ -33,6 +33,7 @@ Taskly's complete-product model reduces an artificial Free/Pro feature matrix. F
 | [MoveBit](https://github.com/turlamai/movebit/blob/main/PRICING.md) | Free community utility; finish updates, multi-display interaction and recovery, and keep it small |
 | [Keyward](https://github.com/turlamai/keyward/blob/main/PRICING.md) | Free security and internal release infrastructure. No charges for key count or security features |
 | [Threadly](https://github.com/turlamai/threadly/blob/main/PRICING.md) | Free desktop community tool, in maintenance mode; sign-in, replies, notifications and BYOK stay free |
+| [TermPilot](https://github.com/turlamai/termpilot/blob/main/PRICING.md) | Commercial consumer product in early development; one-purchase launch target (¥168 / US$24) with BYOK AI free of charge. No sales before the Permit/Commerce gates pass |
 | [SyncPilot](https://github.com/turlamai/syncpilot/blob/main/PRICING.md) | Free maintenance mode. No separate entitlement business for a shell controlling third-party Resilio |
 | [RelayPilot](https://github.com/turlamai/relaypilot/blob/main/PRICING.md) | Architecture experiment; no VPN, node or traffic presales and no claim of an existing service |
 | Pitboard | Free content entry point; maintain accuracy, sources and corrections, without a new subscription wall |

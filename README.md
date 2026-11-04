@@ -25,6 +25,7 @@ Most applications remain development previews. Each page and paired user guide d
 | [RegexMate](https://regexmate.jrtx.site/) | Validate, test, explain and lint regular expressions locally through a CLI, native GUI or MCP. |
 | [MoveBit](https://movebit.jrtx.site/) | Configure work-break and water reminders with local activity history. |
 | [Keyward](https://keyward.jrtx.site/) | Organize and check desktop release-signing keys in a local vault. |
+| [TermPilot](https://termpilot.jrtx.site/) | Connect to hosts over SSH in a real terminal, with an AI assistant that drafts commands and explains output using your own model key. |
 | [Threadly](https://threadly.jrtx.site/) | Read and search the Racket community forum in a native desktop window. |
 | [SyncPilot](https://syncpilot.jrtx.site/) | Manage the official Resilio Sync daemon from a Linux desktop window. |
 | [RelayPilot](https://relaypilot.jrtx.site/) | Explore canonical network profiles, deterministic routing decisions and supervised engine adapters. |
