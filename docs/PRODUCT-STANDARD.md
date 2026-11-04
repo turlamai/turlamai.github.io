@@ -4,6 +4,10 @@ Status: adopted documentation and delivery baseline, 2026-10-23. This document o
 delivery policy. It does not replace a library protocol, a product specification,
 or an existing implementation handoff. Implementation remains tracked in the linked product issues; documentation adoption does not mean the required runtime gates have passed.
 
+## Visual product showcase
+
+Product landing pages follow the [Visual Showcase standard](VISUAL-SHOWCASE.md) / [中文规范](VISUAL-SHOWCASE.zh-CN.md): show real product value within the first two scrolls, distinguish screenshots from conceptual diagrams, keep visuals version-qualified and bilingual, and require explicit visual/deployment review. Text-first manuals remain the durable source for instructions. Documentation adoption is not runtime or release acceptance.
+
 ## Documentation languages
 
 Follow the [English/Chinese language policy](DOCUMENTATION-LANGUAGES.md) / [中文规范](DOCUMENTATION-LANGUAGES.zh-CN.md). Default public entry points are English with complete Chinese user paths; paired product promises must agree. Library API/protocol semantics remain one normative English source. Keep code identifiers and examples unchanged, update both user-facing languages in the same change, and record missing translations honestly.
