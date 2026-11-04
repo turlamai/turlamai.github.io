@@ -1,6 +1,11 @@
 name: Public product visual smoke
 
 on:
+  push:
+    branches: [master]
+    paths:
+      - "scripts/visual-site-smoke.mjs"
+      - ".github/workflows/public-visual-smoke.yml"
   pull_request:
     paths:
       - "scripts/visual-site-smoke.mjs"
