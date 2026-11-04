@@ -2,7 +2,7 @@
 
 **[English](VISUAL-SHOWCASE.md)** · 简体中文
 
-状态：2026-11-04 提案。本文规范**产品站点的展示与证据**，不代表任何产品已经发版、验收通过或界面定型。产品自己的行为契约、验收记录、Release 和用户手册仍是权威来源。
+状态：2026-11-04 已采纳。本文规范**产品站点的展示与证据**，不代表任何产品已经发版、验收通过或界面定型。产品自己的行为契约、验收记录、Release 和用户手册仍是权威来源。
 
 ## 目标
 
@@ -48,6 +48,12 @@
 - [ ] 合并后检查公开 URL、资源加载和 Pages 部署。
 - [ ] 声称展示真实已打包 UI 时，相关平台/构建应有完整原生验收依据。
 
+## 公开站点的浏览器验收证据
+
+本仓库 GitHub Actions 中的 **Public product visual smoke** 可手动执行（支持指定单个站点），也会每周检查一次。它对首轮 18 个产品域名执行 1440、768、375、320 px 布局检查，记录 HTTP 状态、一级标题、横向溢出和图片加载异常，并保存首屏与工作流示意区的浏览器截图供审阅。截图和结构化报告作为 GitHub Actions Artifact 保留 14 天；**不得把这些站点截图当作产品实际界面的长期截图**提交到产品手册。
+
+自动化通过修改 HTML 的 `lang` 属性测试双语示意区 CSS，**并未验证真实语言切换按钮是否工作**。截图和几何检查通过也不能替代人工视觉/键盘/对比度检查、原生软件验收、真实产品界面核验及可用性确认。出现误报时应记录证据再修正检查，而不是简单关闭测试。
+
 ## 首轮推进（2026-11-04）
 
-以下均为**待审 PR，不代表已合并或已部署**：Taskly #106、Booklight #44、Fulcrum #182、Movebit #129、Publy #71、PodLens #43、Autarx #42、FlashPilot #28、gPTP Studio #62、Rivet #413、Glaze #100、SyncPilot #28、Payback #54、RelayPilot #8、HackDigest #24、RegexMate #27、Keyward #23、Threadly #13。现阶段主要采用明确标注的概念图，因为既有截图已随界面迭代而过时。后续需完成真实浏览器布局检查、合并、部署，并在 UI 稳定后逐步替换为有版本依据的真实截图。
+首轮 18 个产品主页 PR 覆盖 Taskly、Booklight、Fulcrum、Movebit、Publy、PodLens、Autarx、FlashPilot、gPTP Studio、Rivet、Glaze、SyncPilot、Payback、RelayPilot、HackDigest、RegexMate、Keyward 和 Threadly。各站点的 PR 合并、CI、原生验收和 Pages 部署状态彼此独立，且持续变化；请以 **[统一追踪 Issue #18](https://github.com/turlamai/turlamai.github.io/issues/18)** 为准，不在长期规范中保留易过期的静态状态。现阶段采用标记为概念图的工作流插画，待相关 UI 稳定后再更新为有版本依据、经过验证的真实产品截图。

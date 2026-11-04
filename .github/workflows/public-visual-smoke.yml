@@ -1,0 +1,58 @@
+name: Public product visual smoke
+
+on:
+  pull_request:
+    paths:
+      - "scripts/visual-site-smoke.mjs"
+      - ".github/workflows/public-visual-smoke.yml"
+      - "docs/VISUAL-SHOWCASE*.md"
+  workflow_dispatch:
+    inputs:
+      site:
+        description: "Optional single site slug (leave empty for all 18)"
+        required: false
+        type: string
+        default: ""
+  schedule:
+    # Weekly public-site drift check, UTC. Product packages are not launched here.
+    - cron: "17 03 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  syntax-check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse visual-smoke harness
+        run: node --check scripts/visual-site-smoke.mjs
+
+  visual-smoke:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - name: Check out portfolio site
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install pinned browser harness
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Check public sites and capture visual evidence
+        run: node scripts/visual-site-smoke.mjs
+        env:
+          AUDIT_SITE: ${{ inputs.site || '' }}
+      - name: Retain screenshots and failure report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-site-visual-audit
+          path: visual-audit/
+          if-no-files-found: warn
+          retention-days: 14
