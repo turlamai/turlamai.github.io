@@ -2,7 +2,7 @@
 
 **English** · [简体中文](VISUAL-SHOWCASE.zh-CN.md)
 
-Status: proposed on 2026-11-04. This is a **product-site presentation and evidence** guideline, not proof that any product is released, qualified, or stable. The local product contract, acceptance reports, release assets and current user guide remain authoritative.
+Status: adopted on 2026-11-04. This is a **product-site presentation and evidence** guideline, not proof that any product is released, qualified, or stable. The local product contract, acceptance reports, release assets and current user guide remain authoritative.
 
 ## Goal
 
@@ -48,6 +48,12 @@ Use a shared rhythm and spacing system, not identical diagrams for unrelated pro
 - [ ] The public URL, images and Pages deployment have been checked after merge.
 - [ ] If a packaged screenshot is claimed, native product acceptance has passed for that platform/build.
 
+## Public-browser audit evidence
+
+The **Public product visual smoke** GitHub Actions workflow in this portfolio repository may be dispatched manually (optionally for one site), and runs weekly. It checks the 18 declared public product domains over 1440, 768, 375 and 320 px layouts, records HTTP status, heading presence, horizontal overflow, and broken images, and retains browser screenshots of the first viewport and the workflow illustration for review. The evidence ZIP and structured report are GitHub Actions artifacts, retained for 14 days; generated screenshots must **not** be committed into product documentation as supposedly durable UI captures.
+
+The browser harness sets HTML `lang` to exercise the bilingual showcase CSS; **it does not prove the user-facing language-picker works**. Browser screenshots and a green geometry check do not replace manual visual/keyboard/contrast reviews, native app acceptance, real product screenshots, or product availability checks. Document any false positive with evidence rather than suppressing failed assertions.
+
 ## Initial rollout (2026-11-04)
 
-The following are **proposed pull requests, not merged/deployed work**: Taskly #106, Booklight #44, Fulcrum #182, Movebit #129, Publy #71, PodLens #43, Autarx #42, FlashPilot #28, gPTP Studio #62, Rivet #413, Glaze #100, SyncPilot #28, Payback #54, RelayPilot #8, HackDigest #24, RegexMate #27, Keyward #23, and Threadly #13. Initial patches use labeled conceptual illustrations precisely because old screenshots became stale. Follow-up work must review browser layouts, merge accepted PRs, deploy, and replace diagrams with verified captures as UIs stabilize.
+The 18 initial product-site PRs cover Taskly, Booklight, Fulcrum, Movebit, Publy, PodLens, Autarx, FlashPilot, gPTP Studio, Rivet, Glaze, SyncPilot, Payback, RelayPilot, HackDigest, RegexMate, Keyward and Threadly. Their merge, CI, native acceptance and deployment states change independently; **[tracking Issue #18](https://github.com/turlamai/turlamai.github.io/issues/18)** is the status source of truth, not this permanent standard. Initial illustrations are intentionally conceptual and labeled, because old app screenshots were stale. Replace with versioned, verified app captures when the relevant interfaces stabilize.
