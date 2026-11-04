@@ -1,6 +1,11 @@
 name: Public product visual smoke
 
 on:
+  pull_request:
+    paths:
+      - "scripts/visual-site-smoke.mjs"
+      - ".github/workflows/public-visual-smoke.yml"
+      - "docs/VISUAL-SHOWCASE*.md"
   workflow_dispatch:
     inputs:
       site:
@@ -16,7 +21,16 @@ permissions:
   contents: read
 
 jobs:
+  syntax-check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse visual-smoke harness
+        run: node --check scripts/visual-site-smoke.mjs
+
   visual-smoke:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
