@@ -1,0 +1,162 @@
+/* ============================================================
+   TurLamAI portal site.css — per-site sections only.
+   Shared frame lives in family.css (site-kit); do not duplicate.
+   ============================================================ */
+
+/* ---------- Section rhythm ---------- */
+.portal-section { padding: 76px 0 64px; scroll-margin-top: 40px; }
+.portal-section--alt {
+    background: var(--kit-bg-elevated);
+    border-block: 1px solid var(--kit-border);
+}
+.portal-section .section-header { margin-bottom: 44px; }
+.portal-section .kit-h2 { max-width: none; }
+.portal-section .kit-lead { margin-top: 14px; }
+
+/* ---------- Work groups ---------- */
+.work-group { margin-bottom: 56px; }
+.work-group:last-child { margin-bottom: 0; }
+.work-group-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--kit-text-2);
+    margin: 0 0 18px;
+}
+.work-group-title::before {
+    content: "";
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: var(--kit-accent);
+}
+.work-group-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--kit-border);
+}
+
+/* ---------- Product cards ---------- */
+.product-grid { display: grid; gap: 20px; }
+.product-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.product-grid--2 .product-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.product-grid--2 .product-card--wide { grid-column: 1 / -1; }
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 26px 28px;
+    background: var(--kit-bg-elevated);
+    border: 1px solid var(--kit-border);
+    border-radius: var(--kit-radius-l);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.product-card:hover {
+    border-color: var(--kit-border-strong);
+    box-shadow: var(--kit-shadow);
+    transform: translateY(-2px);
+}
+.product-name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.product-name {
+    font-family: var(--kit-font-sans);
+    font-size: 1.15em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+.product-tagline { font-size: 1.02em; font-weight: 600; color: var(--kit-text); margin: 8px 0 10px; line-height: 1.4; }
+.product-desc { font-size: 0.92em; color: var(--kit-text-2); line-height: 1.65; margin: 0 0 6px; }
+.product-cta {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 14px;
+    color: var(--kit-accent-strong);
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: transform 0.15s ease;
+}
+html[data-theme="dark"] .product-cta { color: var(--kit-accent); }
+.product-card:hover .product-cta { transform: translateX(3px); }
+
+.product-card--wide { flex-direction: row; align-items: center; gap: 36px; padding: 30px 34px; }
+.product-card--wide .product-wide-head { flex-shrink: 0; }
+.product-card--wide .product-name { font-size: 1.3em; }
+.product-card--wide .product-tagline { margin: 6px 0 0; }
+.product-card--wide .product-desc { flex: 1; margin-bottom: 0; }
+.product-card--wide .product-cta { margin-top: 0; padding-top: 0; flex-shrink: 0; }
+
+/* ---------- WeChat funnel ---------- */
+.wechat-layout { display: flex; align-items: center; justify-content: center; gap: 56px; }
+.wechat-points { max-width: 460px; display: flex; flex-direction: column; gap: 26px; }
+.wechat-point { display: flex; gap: 14px; }
+.wechat-point-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--kit-accent);
+    margin-top: 9px;
+}
+.wechat-point h3 { font-size: 1.05em; margin: 0 0 4px; }
+.wechat-point p { font-size: 0.9em; color: var(--kit-text-2); line-height: 1.6; margin: 0; }
+.wechat-qr-card {
+    flex-shrink: 0;
+    background: var(--kit-bg-elevated);
+    border: 1px solid var(--kit-border);
+    border-radius: var(--kit-radius-l);
+    padding: 28px;
+    text-align: center;
+    box-shadow: var(--kit-shadow);
+}
+.wechat-qr-card img { display: block; width: 208px; height: 208px; border-radius: 12px; }
+.wechat-qr-title { font-weight: 600; font-size: 0.95em; margin: 16px 0 0; }
+.wechat-qr-sub { font-size: 0.8em; color: var(--kit-text-3); margin: 4px 0 0; }
+
+/* ---------- OSS cards ---------- */
+.oss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.oss-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 22px;
+    background: var(--kit-bg-elevated);
+    border: 1px solid var(--kit-border);
+    border-radius: var(--kit-radius-l);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.oss-card:hover {
+    border-color: var(--kit-border-strong);
+    box-shadow: var(--kit-shadow);
+    transform: translateY(-2px);
+}
+.oss-head { display: flex; align-items: center; gap: 8px; }
+.oss-name { font-size: 1.05em; font-weight: 700; margin: 0; margin-right: auto; }
+.oss-desc { font-size: 0.88em; color: var(--kit-text-2); line-height: 1.6; margin: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+    .product-grid--2 { grid-template-columns: repeat(2, 1fr); }
+    .product-card--wide { flex-direction: column; align-items: flex-start; gap: 0; }
+    .product-card--wide .product-wide-head { margin-bottom: 12px; }
+    .product-card--wide .product-desc { margin-bottom: 4px; }
+    .product-card--wide .product-cta { margin-top: auto; padding-top: 14px; }
+}
+@media (max-width: 768px) {
+    .portal-section { padding: 48px 0 40px; }
+    .work-group { margin-bottom: 44px; }
+    .product-grid--2 { grid-template-columns: 1fr; }
+    .wechat-layout { flex-direction: column; gap: 36px; }
+    .wechat-points { max-width: 100%; }
+}
+@media (max-width: 480px) {
+    .kit-hero h1 { font-size: clamp(1.75rem, 7.5vw, 2rem); }
+    .oss-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- Icon visibility per theme ---------- */
+html[data-theme="light"] .kit-icon-moon { display: none; }
+html[data-theme="dark"] .kit-icon-sun { display: none; }
