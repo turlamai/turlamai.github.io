@@ -33,8 +33,9 @@ Taskly 的完整商品形式可减少人为免费/Pro 矩阵。Fulcrum、Booklig
 | [PodLens](https://github.com/turlamai/podlens/blob/main/PRICING.zh-CN.md) | 免费 BYOK 听读工具；不建设另一套音频计费/托管服务；先验证重复收听 |
 | [RegexMate](https://github.com/turlamai/regexmate/blob/main/PRICING.zh-CN.md) | 免费 CLI/GUI/MCP 和内部生产/CI/agent；取消近期待办中的团队 Pro，不因企业身份追收费；现有 BUSL grant 不变 |
 | [MoveBit](https://github.com/turlamai/movebit/blob/main/PRICING.zh-CN.md) | 免费社区工具，完成更新/跨屏/恢复即可，保持小体量 |
-| [Keyward](https://github.com/turlamai/keyward/blob/main/PRICING.zh-CN.md) | 免费安全及自用发布基础设施，不按密钥数或安全功能收费 |
 | [Threadly](https://github.com/turlamai/threadly/blob/main/PRICING.zh-CN.md) | 免费桌面社区工具；登录、回帖、通知与 BYOK 免费，保活 |
+| [TermPilot](https://github.com/turlamai/termpilot/blob/main/PRICING.zh-CN.md) | 商业消费产品（早期开发）；买断制上线目标 ¥168 / US$24，BYOK AI 免费。Permit/Commerce 门禁通过前不售票 |
+| [Keyward](https://github.com/turlamai/keyward/blob/main/PRICING.zh-CN.md) | 商业产品（早期开发；2026-11-10 从免费发布基础设施改判）。定价未定；不再是免费社区工具，门户已移出社区分组 |
 | [SyncPilot](https://github.com/turlamai/syncpilot/blob/main/PRICING.zh-CN.md) | 免费保活，不为第三方 Resilio 的控制壳再建立授权体系 |
 | [RelayPilot](https://github.com/turlamai/relaypilot/blob/main/PRICING.zh-CN.md) | 架构实验，不预售 VPN、节点或流量，不宣称有现成服务 |
 | Pitboard | 免费内容入口，维护事实、来源与勘误，不新建订阅墙 |
@@ -79,7 +80,8 @@ Taskly/Fulcrum 先证明愿意购买的成果；Booklight 不在阅读可靠性�
 | --- | --- |
 | Taskly、Fulcrum、Booklight、gPTP Studio、Autarx、FlashPilot | 离线 Permit 权益，已获资格版本永久使用，付费更新/功能窗口；不采用激活租约、硬件绑定或设备上限。五席方案为命名分配，不是浮动并发 |
 | HackDigest、Publy | 账户绑定的托管订阅权益；服务端校验签名、当前修订/支付状态与原子配额。不提供离线托管额度，不使用桌面激活租约 |
-| Payback、PodLens、RegexMate、MoveBit、Keyward、Threadly、SyncPilot、RelayPilot | 不接商业 Permit/Commerce，不加授权账户或收费设备/席位门禁；移除冲突的历史限制后才能宣传无限制安装包 |
+| Keyward | 商业方向已定（2026-11-10）；尚未接入 Permit/Commerce——定价落地时随 TermPilot 的 Permit/Commerce 门禁一并评估授权机制 |
+| Payback、PodLens、RegexMate、MoveBit、Threadly、SyncPilot、RelayPilot | 不接商业 Permit/Commerce，不加授权账户或收费设备/席位门禁；移除冲突的历史限制后才能宣传无限制安装包 |
 | Pitboard、Racket 程序设计、Yinwang Archive | 免费内容/社区，不签发商业凭据，不加收费墙 |
 | Rivet、Glaze、Keel、Permit、Commerce | 基础库保留现行源码许可。产品授权方案留在产品，不给框架加收费墙 |
 

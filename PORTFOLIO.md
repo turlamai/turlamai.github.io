@@ -31,9 +31,9 @@ Taskly's complete-product model reduces an artificial Free/Pro feature matrix. F
 | [PodLens](https://github.com/turlamai/podlens/blob/main/PRICING.md) | Free BYOK listening/reading tool. Do not build another hosted-audio billing service. Validate repeat listening first |
 | [RegexMate](https://github.com/turlamai/regexmate/blob/main/PRICING.md) | Free CLI/GUI/MCP and internal production/CI/agent use. Cancel near-term team Pro; no corporate-identity fee. Existing BUSL grant stays in force |
 | [MoveBit](https://github.com/turlamai/movebit/blob/main/PRICING.md) | Free community utility; finish updates, multi-display interaction and recovery, and keep it small |
-| [Keyward](https://github.com/turlamai/keyward/blob/main/PRICING.md) | Free security and internal release infrastructure. No charges for key count or security features |
 | [Threadly](https://github.com/turlamai/threadly/blob/main/PRICING.md) | Free desktop community tool, in maintenance mode; sign-in, replies, notifications and BYOK stay free |
 | [TermPilot](https://github.com/turlamai/termpilot/blob/main/PRICING.md) | Commercial consumer product in early development; one-purchase launch target (¥168 / US$24) with BYOK AI free of charge. No sales before the Permit/Commerce gates pass |
+| [Keyward](https://github.com/turlamai/keyward/blob/main/PRICING.md) | Commercial product in early development (reclassified from free release infrastructure on 2026-11-10). Pricing model undecided; not a free community tool, and the portal no longer lists it under community |
 | [SyncPilot](https://github.com/turlamai/syncpilot/blob/main/PRICING.md) | Free maintenance mode. No separate entitlement business for a shell controlling third-party Resilio |
 | [RelayPilot](https://github.com/turlamai/relaypilot/blob/main/PRICING.md) | Architecture experiment; no VPN, node or traffic presales and no claim of an existing service |
 | Pitboard | Free content entry point; maintain accuracy, sources and corrections, without a new subscription wall |
@@ -55,7 +55,8 @@ Decision revision: `2026-10-auth-1`, 2026-10-23. This is a maintainer routing ma
 | --- | --- |
 | Taskly, Fulcrum, Booklight, gPTP Studio, Autarx, FlashPilot | Offline Permit entitlement, perpetual eligible use plus a paid update/feature window; no activation lease, hardware binding or device cap. Five-seat offers use named assignments, not floating concurrency |
 | HackDigest, Publy | Account-scoped hosted subscription right; server verifies signed rights, current revision/payment state and atomic quota. No offline hosted-service allowance or desktop activation lease |
-| Payback, PodLens, RegexMate, MoveBit, Keyward, Threadly, SyncPilot, RelayPilot | No commercial Permit/Commerce integration, licensing accounts or paid device/seat gates; remove conflicting legacy restrictions before advertising an unrestricted build |
+| Keyward | Commercial direction decided (2026-11-10); no Permit/Commerce integration shipped yet — the entitlement mechanism is evaluated together with TermPilot's Permit/Commerce gates when pricing lands |
+| Payback, PodLens, RegexMate, MoveBit, Threadly, SyncPilot, RelayPilot | No commercial Permit/Commerce integration, licensing accounts or paid device/seat gates; remove conflicting legacy restrictions before advertising an unrestricted build |
 | Pitboard, Racket Programming, Yinwang Archive | Free content/community; no commercial credentials or paywall |
 | Rivet, Glaze, Keel, Permit, Commerce | Infrastructure keeps existing source licenses. Product authorization profiles stay with products; no framework-owned paywall |
 
