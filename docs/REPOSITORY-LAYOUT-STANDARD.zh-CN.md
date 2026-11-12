@@ -30,6 +30,7 @@ docs/  examples/  # 可选
 - 包根的 `tests/` 与嵌在主 collection 里的 scribblings 属旧形态——迁移到 `<name>-test/` 与 `<name>-doc/`（待办：keel、ed25519；rivet 的内嵌 scribblings 留到它下一次布局切片）。
 - 库仓库不带产品资产：静态站（`site/`）与服务部署物（`deploy/`）移到消费方产品或基建仓库。迁移完成前至少用 `source-omit-files` 排除并在 README 说明。
 - 单 collection 包：根级模块 + `scribblings/` + `test/`；同样要有 `name` 与 `test-omit-paths`，并 ignore `compiled/` 与生成物 `doc/`。
+- 随包发布的测试模块（`<name>-test/` 或 `test/`）使 `rackunit-lib` 成为**运行时**依赖而非构建依赖：`raco setup --check-pkg-deps` 按运行模式归类其 require（目录名豁免只认 `tests/` 字面名）。glaze 与 foreman 均如此声明并附同样理由注释。
 
 ## rivet 线桌面产品
 

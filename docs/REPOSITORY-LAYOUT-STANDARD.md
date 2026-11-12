@@ -44,6 +44,11 @@ docs/  examples/  # optional
 - Single-collection packages keep root modules plus `scribblings/` and `test/`;
   they still define `name` and `test-omit-paths`, and ignore `compiled/` and
   the generated `doc/`.
+- Test modules that ship inside the package (`<name>-test/` or `test/`) make
+  `rackunit-lib` a **runtime** dep, not a build dep:
+  `raco setup --check-pkg-deps` classifies their requires as run-mode (the
+  literal-name exemption covers `tests/` only). glaze and foreman declare it
+  this way with the same rationale comment.
 
 ## Rivet-line desktop product
 
