@@ -41,7 +41,7 @@ Do not add external JS/CSS frameworks. Fonts stay self-hosted; external Google F
 
 ## Portfolio and delivery ownership
 
-`PORTFOLIO.md` and `PORTFOLIO.zh-CN.md` describe the same portfolio decisions. Delivery rules live in `docs/PRODUCT-STANDARD.md`, the dated product evidence/issue map in `docs/PRODUCT-REVIEW-2026-10.md`, and the website brief in `docs/HOME-PAGE-PLAN.md`. The dependency graph remains owned by Keel's `docs/family-architecture.md`; do not duplicate protocols or product implementation queues here.
+`PORTFOLIO.md` and `PORTFOLIO.zh-CN.md` describe the same portfolio decisions. Delivery rules live in `docs/PRODUCT-STANDARD.md`, repository structure and naming rules in `docs/REPOSITORY-LAYOUT-STANDARD.md` ([中文](docs/REPOSITORY-LAYOUT-STANDARD.zh-CN.md)) with the dated migration queue in `docs/LAYOUT-AUDIT-2026-11.md`, the dated product evidence/issue map in `docs/PRODUCT-REVIEW-2026-10.md`, and the website brief in `docs/HOME-PAGE-PLAN.md`. The dependency graph remains owned by Keel's `docs/family-architecture.md`; do not duplicate protocols or product implementation queues here.
 
 For packaging, updates, public distribution or commerce, also read
 [publisher identity and the portfolio channel matrix](docs/DISTRIBUTION.md)
