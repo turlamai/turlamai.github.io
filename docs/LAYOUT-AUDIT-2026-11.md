@@ -35,6 +35,10 @@ only per the internal-docs exemption).
   `racket/`.
 - icon_512.png → icon-512.png everywhere (flashpilot, keyward, taskly ×2,
   threadly, autarx, movebit, syncpilot app-icon → assets/).
+- yinwang-archive: 51 crawl-residue space filenames → `<slug>-NN`, 6
+  underscore files → kebab, `src/` → `assets/` (12 reference updates),
+  Chinese-titled posts recorded as faithful-archive exception; lint clean,
+  76 tests pass, 311 dist image references verified.
 - Small fixes: turlamai.github.io duplicate font removed; taskly stray
   `.gitignore.rivet` deleted; payback `docs/UPDATE.md` → `update.md` with all
   stale `updates.md` references fixed; publy versions aligned (0.1.0 → 0.8.7)
@@ -72,6 +76,10 @@ only per the internal-docs exemption).
 - Swift/XAML/C++ PascalCase and Python snake_case: language-conventional,
   exempt in the standard.
 - payback `keys/`: public update key only, private keys gitignored — keep.
+- yinwang-archive known content gap: `posts/computer-science.md` references
+  10 `/images/computer-science/*` files that were never captured (missing
+  before this migration too). Recorded, not fixed — stripping archive
+  content is a content decision, not a layout fix.
 - fulcrum, flashpilot, glaze, hackdigest, site-kit, proxy-rules, foreman,
   graft: no structural migration needed; proxy-rules CI remains a noted gap
   (no workflows yet).
