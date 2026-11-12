@@ -67,7 +67,7 @@ glaze.rktd  glaze-schema.json
 - 语言惯例源文件豁免：Swift/Kotlin/C++/C#/XAML 的 PascalCase、Python snake_case、React/TSX 组件 PascalCase、`Makefile`、`Dockerfile`、`CMakeLists.txt`、`*.vcxproj`、上游原样的 vendor 文件。
 - 根级标准文档豁免：`README*`、`LICENSE*`、`CHANGELOG*`、`CONTRIBUTING*`、`SECURITY*`、`AGENTS*`、`VERSION`、`NOTICE`、`EULA*`、`PRICING*`、`THIRD_PARTY_NOTICES.md`、`SKILL.md`，以及作为设计契约真源的 `design/DESIGN.md`。
 - `docs/` 命名：固定入口白名单保持大写——`README.md`、`USING.md`、`USER-GUIDE.md`、`DESIGN.md`、`CHANGELOG.md` 及其 `.zh-CN.md` 对；其余一律小写 kebab（`getting-started.zh-CN.md`）。存量混用目录在该文件下次内容改动时收敛，不要求批量重命名。
-- 包身份：`package.json` 的 `name` 等于仓库名；scoped 包用统一前缀（`@turlamai/<name>`）；一个仓库只有一个版本号真源。插件仓的 Obsidian id、显示名与仓库名对齐，或在文档里说明为何不同。
+- 包身份：`package.json` 的 `name` 等于仓库名；scoped 包每仓一个前缀（如 `@publy/*`）；一个仓库只有一个版本号真源。插件仓的 Obsidian id、显示名与仓库名对齐，或在文档里说明为何不同。
 - agent 技能目录统一 `skills/`（复数），每个技能一个子目录含 `SKILL.md`。
 - 生成物一律 gitignore。生成文件要入库，必须在旁边注释写明生成者与消费方（regexmate 的 `.rivet/generated/**` 目前缺——在其下次布局切片中补注释或挪位）。
 

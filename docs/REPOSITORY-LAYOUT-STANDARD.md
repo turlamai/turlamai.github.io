@@ -105,8 +105,8 @@ story, unless a native host is added later.
   (`getting-started.zh-CN.md`). Existing mixed directories converge at the
   next content touch of each file; no bulk rename is required.
 - Package identity: `package.json` `name` equals the repository name; scoped
-  packages use one prefix (`@turlamai/<name>`); a repository has exactly one
-  version source. A plugin keeps its Obsidian id, display name and repository
+  packages use one prefix per repository (for example `@publy/*`); a
+  repository has exactly one version source. A plugin keeps its Obsidian id, display name and repository
   name aligned or documents why they differ.
 - Agent-skill directories are `skills/` (plural), one subdirectory per skill
   with its `SKILL.md`.
