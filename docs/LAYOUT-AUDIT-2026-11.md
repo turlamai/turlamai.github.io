@@ -49,6 +49,15 @@ only per the internal-docs exemption).
 - publy: root `manifest.json`/`versions.json` kept — they are CI-guarded
   mirrors of `packages/obsidian-plugin/*` (check-plugin-metadata.mjs).
 
+## CI note (2026-11-13)
+
+GitHub Actions queue congestion on 2026-11/12 stranded several migration runs
+for hours (one keel run wedged 12h; one ed25519 macos job got
+infrastructure-cancelled and passed on rerun). Fixes were validated by the
+ed25519 precedent and local gates; keel's final CI stamp was pending on the
+queue at report time (`workflow_dispatch` added to keel's ci.yml so wedged
+runs can be superseded manually).
+
 ## Declined / documented decisions
 
 - syncpilot `macos-host/`+`windows/` gitignored: intentional — Linux-only
