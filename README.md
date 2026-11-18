@@ -29,7 +29,7 @@ Most applications remain development previews. Each page and paired user guide d
 | [Threadly](https://threadly.jrtx.site/) | Read and search the Racket community forum in a native desktop window. |
 | [SyncPilot](https://syncpilot.jrtx.site/) | Manage the official Resilio Sync daemon from a Linux desktop window. |
 | [RelayPilot](https://relaypilot.jrtx.site/) | Explore canonical network profiles, deterministic routing decisions and supervised engine adapters. |
-| [Binlet](https://jrtx.site/products/binlet/) | Prototype workbench for inspecting and safely editing HEX, S19 and BIN firmware images; no production installer. |
+| [Ingot](https://jrtx.site/products/ingot/) | Prototype workbench for inspecting and safely editing HEX, S19 and BIN firmware images; no production installer. |
 | [Layerly](https://jrtx.site/products/layerly/) | Early 3D printing workbench prototype for local design, slicing and print history; no production installer. |
 
 [About and privacy](docs/ABOUT.md). Chinese books and third-party archives retain the original content language.
