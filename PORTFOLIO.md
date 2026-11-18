@@ -18,12 +18,12 @@ This is **not** a promise that every future edition will be free forever. Any fu
 | --- | --- | --- |
 | Everyday tools | Taskly, Fulcrum, RegexMate, MoveBit, Payback, Keyward, TermPilot | Product polish and verified desktop workflows; no paid editions |
 | Reading | Booklight, PodLens, HackDigest | Reading/listening quality, BYOK privacy and recovery; no hosted paid Pro plans |
-| Automotive | Autarx, FlashPilot, gPTP Studio, ImageBench | Semantic correctness, device/hardware evidence and secure engineering tools; no commercial licensing |
+| Automotive | Autarx, FlashPilot, gPTP Studio, Binlet | Semantic correctness, device/hardware evidence and secure engineering tools; no commercial licensing |
 | Community and experiments | Threadly, SyncPilot, Pitboard, RelayPilot, Layerly | Useful, accurately labeled previews or maintenance; no paywalls |
 | Publishing | **Publy** | The only active commercial exception; preserve its current pricing/hosted service gates and open work |
 | Content | Racket Programming, Yinwang Blog Archive | Publication and attribution, not products to paywall |
 
-ImageBench and Layerly are **early prototypes**, not verified packaged installers. Never use a "Download" CTA for a product without a real tested artifact. Each product owns its accurate maturity, platform, privacy, feedback and release details; the portal is an index, not runtime acceptance evidence.
+Binlet and Layerly are **early prototypes**, not verified packaged installers. Never use a "Download" CTA for a product without a real tested artifact. Each product owns its accurate maturity, platform, privacy, feedback and release details; the portal is an index, not runtime acceptance evidence.
 
 ## Shared libraries
 
