@@ -18,12 +18,12 @@
 | --- | --- | --- |
 | 日常工具 | Taskly、Fulcrum、RegexMate、MoveBit、Payback、Keyward、TermPilot | 完成桌面交互、恢复与真实用户流程，不设收费版 |
 | 阅读学习 | Booklight、PodLens、HackDigest | 阅读/听读、BYOK 隐私、缓存与恢复，不做付费托管 Pro |
-| 汽车工程 | Autarx、FlashPilot、gPTP Studio、Ingot | 正确性、真实环境/硬件验证、工程可靠性，不接商业授权 |
+| 汽车工程 | Autarx、FlashPilot、gPTP Studio、Bitsmith | 正确性、真实环境/硬件验证、工程可靠性，不接商业授权 |
 | 社区与实验 | Threadly、SyncPilot、Pitboard、RelayPilot、Layerly | 真实标记预览/维护状态，不设付费门禁 |
 | 公众号发布 | **Publy** | 唯一商业化例外，保留其收费与托管交付门禁和事项 |
 | 内容网站 | Racket 程序设计、王垠博客归档 | 聚焦内容、来源和维护，不将内容收费隔离 |
 
-Ingot 和 Layerly 仍在**早期原型/工程骨架**阶段，不能把设计稿当成已发布安装包。没有真实可验证发行资产的产品不能挂“立即下载”。各产品仓库负责平台、成熟度、隐私、反馈、发布证据；总主页只负责准确索引。
+Bitsmith 和 Layerly 仍在**早期原型/工程骨架**阶段，不能把设计稿当成已发布安装包。没有真实可验证发行资产的产品不能挂“立即下载”。各产品仓库负责平台、成熟度、隐私、反馈、发布证据；总主页只负责准确索引。
 
 ## 通用基础库
 

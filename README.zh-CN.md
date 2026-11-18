@@ -28,7 +28,7 @@
 | [Threadly](https://threadly.jrtx.site/) | 在原生桌面窗口中阅读和搜索 Racket 社区论坛。 |
 | [SyncPilot](https://syncpilot.jrtx.site/) | 在 Linux 桌面窗口中管理官方 Resilio Sync 守护进程。 |
 | [RelayPilot](https://relaypilot.jrtx.site/) | 探索统一网络配置、确定性路由决策和受监督的引擎适配器。 |
-| [Ingot](https://jrtx.site/products/ingot/) | HEX、S19、BIN 固件镜像解析/编辑原型，尚无正式安装包。 |
+| [Bitsmith](https://jrtx.site/products/bitsmith/) | HEX、S19、BIN 固件镜像解析/编辑原型，尚无正式安装包。 |
 | [Layerly](https://jrtx.site/products/layerly/) | 本地 3D 打印工作台的设计与工程骨架，尚无正式安装包。 |
 
 [关于与隐私](docs/ABOUT.zh-CN.md)。中文书站和第三方归档保留原文语言。
