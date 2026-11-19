@@ -2,13 +2,19 @@
 
 [English](PORTFOLIO.md) · **简体中文**
 
-**决策版本：2026-11-19-platform-and-line。** 修订 2026-11-18-quality-first 决策（该决策替换了 2026 年 10 月关于定价、Free/Pro、预售及全家族 Permit/Commerce 接入的旧规划）：MoveBit 加入 Publy 成为第二个商业化开发中产品；平台范围收窄（MoveBit → macOS + Windows，Payback → macOS + Windows + iOS）；Taskly、Booklight、PodLens 由 rivet 线改为 glaze 线。
+**决策版本：2026-11-19-platform-line-commercial。** 修订 2026-11-18-quality-first 决策（该决策替换了 2026 年 10 月关于定价、Free/Pro、预售及全家族 Permit/Commerce 接入的旧规划）：MoveBit 与 Payback 加入 Publy 成为商业化开发中产品；平台范围收窄（MoveBit → macOS + Windows，Payback → macOS + Windows + iOS）；Taskly、Booklight、PodLens 由 rivet 线改为 glaze 线；Fulcrum 保持 quality-first，定位三平台旗舰。
 
 ## 当前规则
 
-**只有 Publy 与 MoveBit 保留商业化开发计划**（MoveBit 自身的收费决策待定；落地前不上购买入口）。其余产品均处于“质量与交付优先”的开发阶段：不做购买入口、结账、试用到期限制、收费功能隔离、订阅计划或产品级 Permit/Commerce 集成；也不再把未来 Pro 作为当前功能或发布任务。先把可用性、安装更新、数据恢复、隐私和可访问性做好。
+**只有 Publy、MoveBit 与 Payback 保留商业化开发计划**（2026-11-19）。三者各自验证一条商业路径，且在各自的收费决策落地前均不上购买入口：
 
-这**不表示承诺所有未来版本永久免费**。非 Publy、非 MoveBit 产品若未来要收费，必须在确实可用、经过验证之后，由维护者重新明确决定（Fulcrum 与 Payback 的商业化仅记为方向）。旧目标价格、权益模型和收费任务均不再生效，不得向用户展示历史目标价格。
+- **Publy** —— 托管发布服务，收费门禁已有定义。
+- **MoveBit** —— 桌面商业产品，先跑通 macOS 桌面付费流程。
+- **Payback** —— 全平台付费流程验证（macOS、Windows、iOS、iPadOS）；功能面刻意保持简单，是家族商业化的探路产品。
+
+其余产品均处于“质量与交付优先”的开发阶段：不做购买入口、结账、试用到期限制、收费功能隔离、订阅计划或产品级 Permit/Commerce 集成；也不再把未来 Pro 作为当前功能或发布任务。先把可用性、安装更新、数据恢复、隐私和可访问性做好。
+
+这**不表示承诺所有未来版本永久免费**。Publy、MoveBit、Payback 之外任何产品若未来要收费，必须在确实可用、经过验证之后，由维护者重新明确决定。旧目标价格、权益模型和收费任务均不再生效，不得向用户展示历史目标价格。
 
 **法律边界：** 本决策不自动更改任何仓库的 `LICENSE` 或 BUSL 条款，也不撤回已授予的源码权利。更新签名、发行认证、发布者身份、自带模型密钥属于安全与发行范畴，不等同于商业权益，不得误删安全机制。
 
@@ -16,7 +22,7 @@
 
 | 分类 | 产品 | 当前原则 |
 | --- | --- | --- |
-| 日常工具 | Taskly、Fulcrum、RegexMate、MoveBit、Payback、Keyward、TermPilot、RelayPilot、Layerly | 完成桌面交互、恢复与真实用户流程；MoveBit 正进入商业化且平台范围收窄，见下方「进行中的变更」 |
+| 日常工具 | Taskly、Fulcrum、RegexMate、MoveBit、Payback、Keyward、TermPilot、RelayPilot、Layerly | 完成桌面交互、恢复与真实用户流程；MoveBit 与 Payback 正进入商业化且平台范围收窄，见下方「进行中的变更」 |
 | 阅读学习 | Booklight、PodLens、HackDigest | 阅读/听读、BYOK 隐私、缓存与恢复，不做付费托管 Pro |
 | 汽车工程 | Autarx、FlashPilot、gPTP Studio、Bitsmith | 正确性、真实环境/硬件验证、工程可靠性，不接商业授权 |
 | 社区与免费工具 | Threadly、SyncPilot、Pitboard | 免费社区工具，真实标注状态，不设付费门禁 |
@@ -27,8 +33,9 @@ Bitsmith 和 Layerly 是**早期直接开发的产品**，尚无验证过的安�
 
 ## 进行中的平台与线路变更（2026-11-19）
 
-- **MoveBit** 收窄为 macOS + Windows（删 Linux，[movebit#169](https://github.com/turlamai/movebit/issues/169)），并进入商业化（自身收费决策待定）。
-- **Payback** 收窄为 macOS + Windows + iOS（删 Linux，[payback#66](https://github.com/turlamai/payback/issues/66)）。
+- **MoveBit** 收窄为 macOS + Windows（删 Linux，[movebit#169](https://github.com/turlamai/movebit/issues/169)），并进入商业化：桌面商业产品，先跑通 macOS 付费流程（自身收费决策待定）。
+- **Payback** 收窄为 macOS + Windows + iOS（删 Linux，[payback#66](https://github.com/turlamai/payback/issues/66)），并进入商业化：全平台付费流程验证产品（macOS / Windows / iOS / iPadOS；自身收费决策待定）。
+- **Fulcrum** 保持 quality-first、三桌面平台（macOS / Windows / Linux）全支持——家族唯一三端同支持的产品，三端广度即其身份；稳定的三端体验仍是未解挑战。
 - **Taskly / Booklight / PodLens** 由 rivet 线改为 glaze 线：引擎、schema、数据格式保留，UI 以单一 Web 实现重写（[taskly#141](https://github.com/turlamai/taskly/issues/141)、[booklight#75](https://github.com/turlamai/booklight/issues/75)、[podlens#63](https://github.com/turlamai/podlens/issues/63)）。每次重写按家族换栈纪律重置版本号。
 - 各产品门户平台声明只在各自重置版本实际发布时更新——不得提前；「没有真实可验证发行资产不能挂下载」全程生效。
 
@@ -48,9 +55,9 @@ Rivet、Glaze、Keel 与协议库仍是基础设施；Permit、Commerce 保留�
 
 ## 落地
 
-- 非 Publy、非 MoveBit 的纯商业化 Issue 按 **not planned** 关闭，保留历史审计记录。
+- Publy、MoveBit、Payback 之外产品的纯商业化 Issue 按 **not planned** 关闭，保留历史审计记录。
 - 同时含真实产品质量事项的 Issue 改成质量任务，不丢失有效技术工作。
-- 移除非 Publy、非 MoveBit README 和官网中的旧定价、试用、购买、Pro 宣传。
+- 移除 Publy、MoveBit、Payback 之外产品 README 和官网中的旧定价、试用、购买、Pro 宣传。
 - 不删除实际的代码签名、源码许可条件或 Publy 依赖的基础库。
 - Publy 商业实施以[自身收费决策](https://github.com/turlamai/publy/blob/main/PRICING.zh-CN.md)为准。
 
