@@ -21,7 +21,7 @@
 
 | 分类 | 产品 | 当前原则 |
 | --- | --- | --- |
-| 日常工具 | Taskly、Fulcrum、RegexMate、MoveBit、Keyward、TermPilot、RelayPilot、Layerly | 完成桌面交互、恢复与真实用户流程；MoveBit 正进入商业化且平台范围收窄，见下方「进行中的变更」 |
+| 日常工具 | Taskly、Fulcrum、RegexMate、MoveBit、Keyward、TermPilot、RelayPilot、Layerly | 完成桌面交互、恢复与真实用户流程；MoveBit 正进入商业化且平台范围收窄，见下方「已发布的变更」 |
 | 阅读学习 | Booklight、PodLens、HackDigest | 阅读/听读、BYOK 隐私、缓存与恢复，不做付费托管 Pro |
 | 汽车工程 | Autarx、FlashPilot、gPTP Studio、Bitsmith | 正确性、真实环境/硬件验证、工程可靠性，不接商业授权 |
 | 社区与免费工具 | Threadly、SyncPilot、Pitboard | 免费社区工具，真实标注状态，不设付费门禁 |
@@ -30,12 +30,12 @@
 
 Bitsmith 和 Layerly 是**早期直接开发的产品**，尚无验证过的安装包，不能把设计稿当成已发布安装包。没有真实可验证发行资产的产品不能挂“立即下载”。各产品仓库负责平台、成熟度、隐私、反馈、发布证据；总主页只负责准确索引。
 
-## 进行中的平台与线路变更（2026-11-19）
+## 平台与线路变更——已发布（2026-11-19 决策，2026-11-23 落地）
 
-- **MoveBit** 收窄为 macOS + Windows（删 Linux，[movebit#169](https://github.com/turlamai/movebit/issues/169)），并进入商业化：桌面商业产品，先跑通 macOS 付费流程（自身收费决策待定）。
+- **MoveBit** 已收窄为 macOS + Windows（删 Linux，[movebit#169](https://github.com/turlamai/movebit/issues/169)），并进入商业化：桌面商业产品，先跑通 macOS 付费流程（自身收费决策待定）。重置版本 `v0.1.0` 仅含 macOS arm64/x64 + Windows x64 资产；门户卡片现声明 macOS + Windows。
 - **Fulcrum** 保持 quality-first、三桌面平台（macOS / Windows / Linux）全支持——家族唯一三端同支持的产品，三端广度即其身份；稳定的三端体验仍是未解挑战。
-- **Taskly / Booklight / PodLens** 由 rivet 线改为 glaze 线：引擎、schema、数据格式保留，UI 以单一 Web 实现重写（[taskly#141](https://github.com/turlamai/taskly/issues/141)、[booklight#75](https://github.com/turlamai/booklight/issues/75)、[podlens#63](https://github.com/turlamai/podlens/issues/63)）。每次重写按家族换栈纪律重置版本号。
-- 各产品门户平台声明只在各自重置版本实际发布时更新——不得提前；「没有真实可验证发行资产不能挂下载」全程生效。
+- **Taskly / Booklight / PodLens** 已由 rivet 线改为 glaze 线：引擎、schema、数据格式保留，UI 为 glaze 载体上的单一 Web 实现（[taskly#141](https://github.com/turlamai/taskly/issues/141)、[booklight#75](https://github.com/turlamai/booklight/issues/75)、[podlens#63](https://github.com/turlamai/podlens/issues/63)）。三者均已发布重置版本：Taskly `v0.1.0`、Booklight `v0.1.0`、PodLens `v0.1.1`——均含 macOS arm64/x64、Windows x64、Linux x64/arm64 资产与签名更新 feed。
+- 门户平台声明与「立即下载」CTA 仅在各自重置版本实际发布后更新（「没有真实可验证发行资产不能挂下载」全程生效）。门户卡片现将 Taskly / Booklight / PodLens 标为 Glaze，MoveBit 标为 macOS + Windows。
 
 ## 通用基础库
 
@@ -58,4 +58,3 @@ Rivet、Glaze、Keel 与协议库仍是基础设施；Permit、Commerce 保留�
 - 移除 Publy、MoveBit 之外产品 README 和官网中的旧定价、试用、购买、Pro 宣传。
 - 不删除实际的代码签名、源码许可条件或 Publy 依赖的基础库。
 - Publy 商业实施以[自身收费决策](https://github.com/turlamai/publy/blob/main/PRICING.zh-CN.md)为准。
-
