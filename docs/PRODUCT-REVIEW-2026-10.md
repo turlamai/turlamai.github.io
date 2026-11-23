@@ -76,7 +76,8 @@ Booklight #17/#19，以及 Fulcrum 的交互/发布与功能切片。开放 PR �
 | yinwang-archive | P2 | 这是内容归档项目，不应用桌面更新/收费基线；最新master与gh-pages分支均需保留其部署用途。 | [审查 issue](https://github.com/turlamai/yinwang-archive/issues/5) |
 | racket-programming | P2 | 在线书属于免费社区内容，需用示例可运行、导航和勘误作为交付标准。代码书不应继承桌面产品的移动/许可队列。 | [审查 issue](https://github.com/turlamai/racket-programming/issues/8) |
 
-用户已确认 Keepsake / Moonbeam 等本轮找不到的仓库已删除。Keepsake / Moonbeam
+用户已确认 Keepsake / Moonbeam 等本轮找不到的仓库已删除；Payback 于 2026-11-23
+经维护者决定下架并删除仓库。Keepsake / Moonbeam / Payback
 退出当前产品组合，不再作为来源待补、待恢复或待收费项目。主站残留产品卡、进度入口、
 导航、双语文案与文档引用应清理；历史审查记录保留删除事实，不据此重建仓库。
 
@@ -145,7 +146,7 @@ cancelled 与 skipped 均未当作通过。执行前重新检查当前状态。
 | syncpilot | main | [1e485e1](https://github.com/turlamai/syncpilot/tree/1e485e17599833fb0e31eba341fbedd59ab5b903) | v0.8.4 |
 | relaypilot | main | [a16463f](https://github.com/turlamai/relaypilot/tree/a16463f68d275aa3aad7514a090e68cd61677bd5) | 无可核验发布 |
 | podlens | main | [40acec2](https://github.com/turlamai/podlens/tree/40acec2cbdd22097ae7fdf26b023ceb57085aee5) | v0.3.0 |
-| payback | main | [33729c0](https://github.com/turlamai/payback/tree/33729c01b50221d52324124f637373b3294ab5a2) | v1.10.3 |
+| payback | — | 用户确认已删除（2026-11-23） | 退出当前组合 |
 | booklight | main | [06e0331](https://github.com/turlamai/booklight/tree/06e033192be4bbce3ad6e4781291c372af728a6d) | v0.7.0 |
 | keepsake | — | 用户确认已删除 | 退出当前组合 |
 | moonbeam | — | 用户确认已删除 | 退出当前组合 |

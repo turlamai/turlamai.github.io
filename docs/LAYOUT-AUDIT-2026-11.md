@@ -84,7 +84,8 @@ runs can be superseded manually).
   on disk), recorded exception in AGENTS.md.
 - Swift/XAML/C++ PascalCase and Python snake_case: language-conventional,
   exempt in the standard.
-- payback `keys/`: public update key only, private keys gitignored — keep.
+- payback `keys/`: public update key only, private keys gitignored — exception
+  retired; the payback repository was deleted by owner decision (2026-11-23).
 - yinwang-archive known content gap: `posts/computer-science.md` references
   10 `/images/computer-science/*` files that were never captured (missing
   before this migration too). Recorded, not fixed — stripping archive

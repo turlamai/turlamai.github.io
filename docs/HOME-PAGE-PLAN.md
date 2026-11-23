@@ -75,10 +75,11 @@ and desktop screenshots, including dark mode. A successful Pages deployment
 does not prove the content is correct; compare deployed HTML to the intended
 source SHA. Preserve the last deployed commit for rollback.
 
-First fix the observed gPTP Studio old GTK/WebView claims, Payback desktop-Pro
-promise and source/license wording conflicts. Then ship the main-site hierarchy,
+First fix the observed gPTP Studio old GTK/WebView claims and source/license
+wording conflicts. Then ship the main-site hierarchy,
 then the commercial/consumer canary product pages, then the remaining catalog.
-Keepsake and Moonbeam were confirmed deleted by the owner. Remove their
+Keepsake and Moonbeam were confirmed deleted by the owner; Payback was delisted
+and its repository deleted by owner decision on 2026-11-23. Remove their
 remaining cards, progress CTAs, navigation and bilingual text from the main
 site and current product catalog. Do not retain them as upcoming products or
 create source-recovery work for them.

@@ -8,7 +8,7 @@ import { join } from "node:path";
 const sites = [
   "taskly", "booklight", "fulcrum", "movebit", "publy", "podlens",
   "autarx", "flashpilot", "gptp-studio", "rivet", "glaze", "syncpilot",
-  "payback", "relaypilot", "hackdigest", "regexmate", "keyward", "threadly"
+  "relaypilot", "hackdigest", "regexmate", "keyward", "threadly"
 ];
 const selection = (process.env.AUDIT_SITE || "").trim();
 if (selection && !sites.includes(selection)) {

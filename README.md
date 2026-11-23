@@ -13,7 +13,6 @@ Most applications remain development previews. Each page and paired user guide d
 | Product | Purpose |
 |---|---|
 | [Taskly](https://taskly.jrtx.site/) | A local task manager for lists, quick capture and scheduled reminders. |
-| [Payback](https://payback.jrtx.site/) | Understand the daily cost of devices you own and the value you assign to using them. |
 | [Fulcrum](https://fulcrum.jrtx.site/) | Launch apps, search and use keyboard tools from one native command window. |
 | [Booklight](https://booklight.jrtx.site/) | Read PDF and EPUB files, annotate them and optionally ask your own AI provider about a document. |
 | [gPTP Studio](https://gptp-studio.jrtx.site/) | Inspect and debug gPTP / IEEE 802.1AS behavior on a Linux workstation. |

@@ -15,7 +15,7 @@ in [RACKET-PACKAGE-STANDARD.md](RACKET-PACKAGE-STANDARD.md).
 | Class | Examples | Layout owner |
 | --- | --- | --- |
 | Family library (multi-collection Racket package) | rivet, glaze, permit, commerce, keel, foreman, graft, sonar, switchboard, ed25519 | § Library |
-| Rivet-line desktop product | taskly, fulcrum, payback, … | § Rivet product |
+| Rivet-line desktop product | taskly, fulcrum, movebit, … | § Rivet product |
 | Glaze-line desktop product | hackdigest, termpilot | § Glaze product |
 | Free-form (plugins, content sites, archives, tools) | obsidian-postly, publy, pitboard, yinwang-archive, site-kit, proxy-rules, racket-programming | own layout, naming rules still apply |
 

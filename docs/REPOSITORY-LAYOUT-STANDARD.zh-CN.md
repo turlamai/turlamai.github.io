@@ -9,7 +9,7 @@
 | 类别 | 例 | 布局归属 |
 | --- | --- | --- |
 | 家族库（多 collection Racket 包） | rivet、glaze、permit、commerce、keel、foreman、graft、sonar、switchboard、ed25519 | § 家族库 |
-| rivet 线桌面产品 | taskly、fulcrum、payback 等 | § rivet 产品 |
+| rivet 线桌面产品 | taskly、fulcrum、movebit 等 | § rivet 产品 |
 | glaze 线桌面产品 | hackdigest、termpilot | § glaze 产品 |
 | 自由体（插件、内容站、存档、工具） | obsidian-postly、publy、pitboard、yinwang-archive、site-kit、proxy-rules、racket-programming | 自定布局，命名规则仍适用 |
 
