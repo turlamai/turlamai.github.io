@@ -21,7 +21,7 @@ This is **not** a promise that every future edition will be free forever. Any fu
 
 | Group | Products | Current scope |
 | --- | --- | --- |
-| Everyday tools | Taskly, Fulcrum, RegexMate, MoveBit, Keyward, TermPilot, RelayPilot, Layerly | Product polish and verified desktop workflows; MoveBit is entering commercialization with a narrowed platform scope — see the in-flight changes below |
+| Everyday tools | Taskly, Fulcrum, RegexMate, MoveBit, Keyward, TermPilot, RelayPilot, Layerly | Product polish and verified desktop workflows; MoveBit is entering commercialization with a narrowed platform scope — see the shipped changes below |
 | Reading | Booklight, PodLens, HackDigest | Reading/listening quality, BYOK privacy and recovery; no hosted paid Pro plans |
 | Automotive | Autarx, FlashPilot, gPTP Studio, Bitsmith | Semantic correctness, device/hardware evidence and secure engineering tools; no commercial licensing |
 | Community and free tools | Threadly, SyncPilot, Pitboard | Free community tools, accurately labeled; no paywalls |
@@ -30,12 +30,12 @@ This is **not** a promise that every future edition will be free forever. Any fu
 
 Bitsmith and Layerly are **early-stage products in direct development**, not verified packaged installers. Never use a "Download" CTA for a product without a real tested artifact. Each product owns its accurate maturity, platform, privacy, feedback and release details; the portal is an index, not runtime acceptance evidence.
 
-## In-flight platform and line changes (2026-11-19)
+## Platform and line changes — shipped (2026-11-19 decision, landed 2026-11-23)
 
-- **MoveBit** narrows to macOS + Windows (Linux dropped, [movebit#169](https://github.com/turlamai/movebit/issues/169)) and enters commercialization as the desktop commercial product, validating the macOS payment flow first (its own PRICING decision pending).
+- **MoveBit** narrowed to macOS + Windows (Linux dropped, [movebit#169](https://github.com/turlamai/movebit/issues/169)) and entered commercialization as the desktop commercial product, validating the macOS payment flow first (its own PRICING decision pending). Reset release `v0.1.0` ships macOS arm64/x64 + Windows x64 artifacts only; the portal card now claims macOS + Windows.
 - **Fulcrum** stays quality-first on all three desktop platforms (macOS / Windows / Linux) — the family's only product supporting all three simultaneously, and that breadth is its identity. Reaching a stable three-platform experience remains its open challenge.
-- **Taskly / Booklight / PodLens** re-line from rivet to glaze: engines, schemas and data formats survive; the UI is rebuilt as a single web implementation ([taskly#141](https://github.com/turlamai/taskly/issues/141), [booklight#75](https://github.com/turlamai/booklight/issues/75), [podlens#63](https://github.com/turlamai/podlens/issues/63)). Each rewrite ships a version reset per the family stack-change rule.
-- Per-product portal platform claims update only when each reset release actually ships — never before. The "no Download CTA without a real tested artifact" rule stays in force throughout.
+- **Taskly / Booklight / PodLens** re-lined from rivet to glaze: engines, schemas and data formats survived; the UI is a single web implementation on the glaze carrier ([taskly#141](https://github.com/turlamai/taskly/issues/141), [booklight#75](https://github.com/turlamai/booklight/issues/75), [podlens#63](https://github.com/turlamai/podlens/issues/63)). Each shipped its version reset: Taskly `v0.1.0`, Booklight `v0.1.0`, PodLens `v0.1.1` — all three with macOS arm64/x64, Windows x64 and Linux x64/arm64 artifacts and a signed update feed.
+- Portal platform claims and Download CTAs were updated only after each reset release actually published (the "no Download CTA without a real tested artifact" rule held throughout). The portal cards now label Taskly / Booklight / PodLens as Glaze and MoveBit as macOS + Windows.
 
 ## Shared libraries
 
