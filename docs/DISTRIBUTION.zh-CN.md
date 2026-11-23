@@ -25,7 +25,7 @@ Azure Artifact Signing 的公开信任个人开户目前要求居住于美国或
 | 产品 | 初始渠道与下一步判断 |
 | --- | --- |
 | Taskly、Fulcrum、Booklight | 已支持的 macOS 优先签名/公证官网发行；已支持的 Windows 在免费试点之后评估 Store MSIX，保留官网替代渠道。付费商店版还必须通过下述更新窗口兼容门禁。 |
-| Payback、PodLens、RegexMate、MoveBit | 保持免费。支持 Windows 的产品可评估 Store MSIX；Mac 公开包仍需同样的发行者信任门禁。RegexMate 通过既有交付门禁后，作为首个复杂度较低的 Store 候选，不意味着现在重启开发。Payback 必须先移除遗留收费/设备门禁。 |
+| PodLens、RegexMate、MoveBit | 保持免费。支持 Windows 的产品可评估 Store MSIX；Mac 公开包仍需同样的发行者信任门禁。RegexMate 通过既有交付门禁后，作为首个复杂度较低的 Store 候选，不意味着现在重启开发。 |
 | Keyward | 保持免费，优先独立签名桌面发行。上架前单独审核密钥保管、权限和账号资格；本地钥匙管理器不自动等于获准签名服务或安全的生产私钥存储。 |
 | gPTP Studio、Autarx、FlashPilot | 优先工程用途的官网/系统原生发行，只提供已验证平台；保留已支持的 Linux 包/CLI。评估商店前核实硬件访问、权限和驱动依赖；模拟器不能代替硬件验收。gPTP 仍是商业技术试点，与 Windows 商店试点分开。 |
 | HackDigest | 本地/BYOK 桌面渠道遵循上述 Mac/Windows 规则。托管权益与服务收费另过上线门禁；验证后端不要求先上商店。 |

@@ -13,7 +13,6 @@
 | 产品 | 用途 |
 |---|---|
 | [Taskly](https://taskly.jrtx.site/) | 用清单、快速录入和定时提醒管理本地待办。 |
-| [Payback](https://payback.jrtx.site/) | 记录已有设备的每日成本，以及你赋予使用它们的价值。 |
 | [Fulcrum](https://fulcrum.jrtx.site/) | 在一个原生命令窗口中启动应用、搜索并使用键盘工具。 |
 | [Booklight](https://booklight.jrtx.site/) | 阅读 PDF 和 EPUB、添加批注，并可选使用自己的 AI 服务处理文档。 |
 | [gPTP Studio](https://gptp-studio.jrtx.site/) | 在 Linux 工作站上观察和调试 gPTP / IEEE 802.1AS。 |

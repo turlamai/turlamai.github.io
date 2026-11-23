@@ -4,6 +4,8 @@
 
 Reviewed 2026-10-23. This is a dated architecture/design review and implementation routing map, not a visual certification or a second product specification. Product contracts and linked issues remain the owners. Read this together with [PRODUCT-STANDARD](PRODUCT-STANDARD.md) and each repository's current AGENTS before the next relevant slice; do not overwrite later fixes with this snapshot.
 
+> Status note (2026-11-23): Payback was delisted and its repository deleted by owner decision. Its rows and anchors below are historical review evidence only; do not route new work to them.
+
 ## Evidence and limits
 
 All 25 repositories were exported from pinned default-branch commits into isolated review directories. Review covered product positioning, design/acceptance documents and representative native/shared-web interaction code, with 63 checked source anchors. It is not a line-by-line audit of every file. Existing open issues/PRs were inspected to retain active ownership and avoid duplicating existing queues.
