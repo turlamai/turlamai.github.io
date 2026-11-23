@@ -58,3 +58,4 @@ See the [product delivery standard](docs/PRODUCT-STANDARD.md), [public presentat
 - Remove stale customer-facing pricing and purchase copy in non-commercial READMEs and sites (anything outside Publy, MoveBit). Do not claim a paid tier is about to launch.
 - Do not delete security signing, existing source license conditions, or the shared libraries Publy uses.
 - Keep Publy billing and commercial readiness under [Publy's own decision](https://github.com/turlamai/publy/blob/main/PRICING.md).
+

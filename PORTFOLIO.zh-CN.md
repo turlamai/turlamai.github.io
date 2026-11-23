@@ -58,3 +58,4 @@ Rivet、Glaze、Keel 与协议库仍是基础设施；Permit、Commerce 保留�
 - 移除 Publy、MoveBit 之外产品 README 和官网中的旧定价、试用、购买、Pro 宣传。
 - 不删除实际的代码签名、源码许可条件或 Publy 依赖的基础库。
 - Publy 商业实施以[自身收费决策](https://github.com/turlamai/publy/blob/main/PRICING.zh-CN.md)为准。
+
