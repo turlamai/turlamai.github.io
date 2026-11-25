@@ -167,7 +167,7 @@ published tags/history or remove an old installer needed for update testing.
 
 ## Authorization decision before implementation
 
-Before changing trials, paid gates, credential import, renewal or update eligibility, read the product's complete authorization decision in its paired PRICING documents and the linked implementation issue. Explicitly select no commercial integration, offline perpetual entitlement, or server-verified hosted rights; activation leases are opt-in and need a named business reason. Record decision revision and actual source/policy SHAs, plus offline/outage/expiry/recovery evidence. No policy-file or issue update proves a running agent has acknowledged it. Keep these maintainer decisions outside customer website navigation.
+Before changing trials, paid gates, credential import, renewal or update eligibility, read the product's complete authorization decision — the [portfolio decisions](../PORTFOLIO.md), the product's own pricing decision where one exists (Publy's [`PRICING.md`](https://github.com/turlamai/publy/blob/main/PRICING.md)), and the linked implementation issue; the per-product PRICING documents the other repositories used to carry were retired with the 2026-11-19 portfolio decision. Explicitly select no commercial integration, offline perpetual entitlement, or server-verified hosted rights; activation leases are opt-in and need a named business reason. Record decision revision and actual source/policy SHAs, plus offline/outage/expiry/recovery evidence. No policy-file or issue update proves a running agent has acknowledged it. Keep these maintainer decisions outside customer website navigation.
 
 ## Commercial readiness
 
