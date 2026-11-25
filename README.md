@@ -21,7 +21,6 @@ Most applications remain development previews. Each page and paired user guide d
 | [HackDigest](https://hackdigest.jrtx.site/) | Read Hacker News with on-demand title translation, article digests and thread summaries. |
 | [Publy](https://publy.jrtx.site/) | Turn Markdown into WeChat article drafts and image-post cards, with local preview and a self-hosted delivery server. |
 | [PodLens](https://podlens.jrtx.site/) | Listen to podcasts and optionally create sentence-aligned transcripts, translations and summaries with your own model key. |
-| [RegexMate](https://regexmate.jrtx.site/) | Validate, test, explain and lint regular expressions locally through a CLI, native GUI or MCP. |
 | [MoveBit](https://movebit.jrtx.site/) | Configure work-break and water reminders with local activity history. |
 | [Keyward](https://keyward.jrtx.site/) | Organize and check desktop release-signing keys in a local vault. |
 | [TermPilot](https://termpilot.jrtx.site/) | Connect to hosts over SSH in a real terminal, with an AI assistant that drafts commands and explains output using your own model key. |

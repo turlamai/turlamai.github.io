@@ -76,8 +76,8 @@ Booklight #17/#19，以及 Fulcrum 的交互/发布与功能切片。开放 PR �
 | yinwang-archive | P2 | 这是内容归档项目，不应用桌面更新/收费基线；最新master与gh-pages分支均需保留其部署用途。 | [审查 issue](https://github.com/turlamai/yinwang-archive/issues/5) |
 | racket-programming | P2 | 在线书属于免费社区内容，需用示例可运行、导航和勘误作为交付标准。代码书不应继承桌面产品的移动/许可队列。 | [审查 issue](https://github.com/turlamai/racket-programming/issues/8) |
 
-用户已确认 Keepsake / Moonbeam 等本轮找不到的仓库已删除；Payback 于 2026-11-23
-经维护者决定下架并删除仓库。Keepsake / Moonbeam / Payback
+用户已确认 Keepsake / Moonbeam 等本轮找不到的仓库已删除；Payback 于 2026-11-23、
+RegexMate 于 2026-11-25 经维护者决定下架并删除仓库。Keepsake / Moonbeam / Payback / RegexMate
 退出当前产品组合，不再作为来源待补、待恢复或待收费项目。主站残留产品卡、进度入口、
 导航、双语文案与文档引用应清理；历史审查记录保留删除事实，不据此重建仓库。
 
@@ -140,7 +140,7 @@ cancelled 与 skipped 均未当作通过。执行前重新检查当前状态。
 | movebit | main | [9be4869](https://github.com/turlamai/movebit/tree/9be48696e2a2a5cf82d31cba1d2b8c2246b7c870) | v0.4.0 |
 | hackdigest | main | [fb5dc6b](https://github.com/turlamai/hackdigest/tree/fb5dc6b28de7a73149017d5201c0ec7e40932951) | v0.3.1 |
 | threadly | main | [f305dbb](https://github.com/turlamai/threadly/tree/f305dbbe9fa53703ca13d856aaf36eda590556dd) | v0.13.0 |
-| regexmate | main | [7886f7d](https://github.com/turlamai/regexmate/tree/7886f7d22930121142918d8987082dee2df8b5d2) | v0.7.0 |
+| regexmate | — | 用户确认已删除（2026-11-25） | 退出当前组合 |
 | fulcrum | main | [f9b01e2](https://github.com/turlamai/fulcrum/tree/f9b01e2be6b7d28f081aac8ee7b47979944d1c46) | v0.13.2 |
 | publy | main | [4be6099](https://github.com/turlamai/publy/tree/4be60990cf6cb1a5ace08fe6278fdb7f4e917838) | 0.8.3 |
 | syncpilot | main | [1e485e1](https://github.com/turlamai/syncpilot/tree/1e485e17599833fb0e31eba341fbedd59ab5b903) | v0.8.4 |

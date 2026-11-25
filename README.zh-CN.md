@@ -21,7 +21,6 @@
 | [HackDigest](https://hackdigest.jrtx.site/) | 通过按需标题翻译、文章摘要和讨论总结阅读 Hacker News。 |
 | [Publy](https://publy.jrtx.site/) | 将 Markdown 转为微信公众号文章草稿与图片卡片，提供本地预览和自托管投递服务。 |
 | [PodLens](https://podlens.jrtx.site/) | 收听播客，并可用自己的模型密钥生成逐句转写、翻译和总结。 |
-| [RegexMate](https://regexmate.jrtx.site/) | 通过 CLI、原生 GUI 或 MCP 在本地验证、测试、解释和检查正则。 |
 | [MoveBit](https://movebit.jrtx.site/) | 配置工作休息与喝水提醒，并查看本地活动历史。 |
 | [Keyward](https://keyward.jrtx.site/) | 在本地密钥库中整理和检查桌面软件发布签名密钥。 |
 | [Threadly](https://threadly.jrtx.site/) | 在原生桌面窗口中阅读和搜索 Racket 社区论坛。 |

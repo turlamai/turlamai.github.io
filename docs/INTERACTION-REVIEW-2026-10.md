@@ -5,6 +5,8 @@
 Reviewed 2026-10-23. This is a dated architecture/design review and implementation routing map, not a visual certification or a second product specification. Product contracts and linked issues remain the owners. Read this together with [PRODUCT-STANDARD](PRODUCT-STANDARD.md) and each repository's current AGENTS before the next relevant slice; do not overwrite later fixes with this snapshot.
 
 > Status note (2026-11-23): Payback was delisted and its repository deleted by owner decision. Its rows and anchors below are historical review evidence only; do not route new work to them.
+>
+> Status note (2026-11-25): RegexMate was delisted and its repository deleted by owner decision. Its rows and anchors below are historical review evidence only; do not route new work to them.
 
 ## Evidence and limits
 

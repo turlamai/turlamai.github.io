@@ -2,7 +2,7 @@
 
 **English** · [简体中文](PORTFOLIO.zh-CN.md)
 
-**Decision revision: 2026-11-23-payback-delist.** Amends the 2026-11-19-platform-line-commercial decision (which had MoveBit and Payback join Publy as active commercialization products and narrowed platform scopes): Payback is delisted and its repository deleted by owner decision (2026-11-23) — the project does not fit the portfolio's goals. MoveBit stays in commercialization with its narrowed macOS + Windows scope; Taskly, Booklight and PodLens re-line from rivet to glaze; Fulcrum stays quality-first as the three-platform flagship.
+**Decision revision: 2026-11-25-regexmate-delist.** Amends the 2026-11-23-payback-delist decision (which had removed Payback from the portfolio): RegexMate is delisted and its repository deleted by owner decision (2026-11-25) — the project does not fit the portfolio's goals. MoveBit stays in commercialization with its narrowed macOS + Windows scope; Taskly, Booklight and PodLens re-line from rivet to glaze; Fulcrum stays quality-first as the three-platform flagship.
 
 ## Current rule
 
@@ -21,7 +21,7 @@ This is **not** a promise that every future edition will be free forever. Any fu
 
 | Group | Products | Current scope |
 | --- | --- | --- |
-| Everyday tools | Taskly, Fulcrum, RegexMate, MoveBit, Keyward, TermPilot, RelayPilot, Layerly | Product polish and verified desktop workflows; MoveBit is entering commercialization with a narrowed platform scope — see the shipped changes below |
+| Everyday tools | Taskly, Fulcrum, MoveBit, Keyward, TermPilot, RelayPilot, Layerly | Product polish and verified desktop workflows; MoveBit is entering commercialization with a narrowed platform scope — see the shipped changes below |
 | Reading | Booklight, PodLens, HackDigest | Reading/listening quality, BYOK privacy and recovery; no hosted paid Pro plans |
 | Automotive | Autarx, FlashPilot, gPTP Studio, Bitsmith | Semantic correctness, device/hardware evidence and secure engineering tools; no commercial licensing |
 | Community and free tools | Threadly, SyncPilot, Pitboard | Free community tools, accurately labeled; no paywalls |
