@@ -2,7 +2,7 @@
 
 [English](PORTFOLIO.md) · **简体中文**
 
-**决策版本：2026-11-23-payback-delist。** 修订 2026-11-19-platform-line-commercial 决策（该决策曾让 MoveBit 与 Payback 加入 Publy 成为商业化开发中产品并收窄平台范围）：维护者决定（2026-11-23）将 Payback 下架并删除其仓库——该项目不符合产品组合的目标。MoveBit 保留商业化及收窄后的 macOS + Windows 范围；Taskly、Booklight、PodLens 由 rivet 线改为 glaze 线；Fulcrum 保持 quality-first，定位三平台旗舰。
+**决策版本：2026-11-25-regexmate-delist。** 修订 2026-11-23-payback-delist 决策（该决策已将 Payback 移出产品组合）：维护者决定（2026-11-25）将 RegexMate 下架并删除其仓库——该项目不符合产品组合的目标。MoveBit 保留商业化及收窄后的 macOS + Windows 范围；Taskly、Booklight、PodLens 由 rivet 线改为 glaze 线；Fulcrum 保持 quality-first，定位三平台旗舰。
 
 ## 当前规则
 
@@ -21,7 +21,7 @@
 
 | 分类 | 产品 | 当前原则 |
 | --- | --- | --- |
-| 日常工具 | Taskly、Fulcrum、RegexMate、MoveBit、Keyward、TermPilot、RelayPilot、Layerly | 完成桌面交互、恢复与真实用户流程；MoveBit 正进入商业化且平台范围收窄，见下方「已发布的变更」 |
+| 日常工具 | Taskly、Fulcrum、MoveBit、Keyward、TermPilot、RelayPilot、Layerly | 完成桌面交互、恢复与真实用户流程；MoveBit 正进入商业化且平台范围收窄，见下方「已发布的变更」 |
 | 阅读学习 | Booklight、PodLens、HackDigest | 阅读/听读、BYOK 隐私、缓存与恢复，不做付费托管 Pro |
 | 汽车工程 | Autarx、FlashPilot、gPTP Studio、Bitsmith | 正确性、真实环境/硬件验证、工程可靠性，不接商业授权 |
 | 社区与免费工具 | Threadly、SyncPilot、Pitboard | 免费社区工具，真实标注状态，不设付费门禁 |

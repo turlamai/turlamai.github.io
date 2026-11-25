@@ -67,7 +67,7 @@ rivet.rktd  rivet-schema.json  rivet-acceptance.rktd  VERSION
   is a naming defect (pending: keyward, podlens, threadly, relaypilot).
 - `site/` is the website root; `docs/` holds documents only. Website kits
   inside `docs/` migrate to `site/` (pending: autarx, booklight, gptp-studio,
-  movebit, regexmate, syncpilot, taskly, hackdigest). Until migrated, the
+  movebit, syncpilot, taskly, hackdigest). Until migrated, the
   site-kit path fallback keeps them working.
 - A Linux-only product may omit `macos-host/` and `windows/` and keeps their
   local generated residue gitignored (syncpilot precedent).
@@ -116,9 +116,8 @@ story, unless a native host is added later.
 - Agent-skill directories are `skills/` (plural), one subdirectory per skill
   with its `SKILL.md`.
 - Generated artifacts are gitignored. A generated file may be committed only
-  with an adjacent comment naming its generator and consumer
-  (`regexmate` `.rivet/generated/**` currently lacks this — annotate or
-  relocate in its next layout slice).
+  with an adjacent comment naming its generator and consumer (annotate or
+  relocate a committed tree that lacks it in its next layout slice).
 
 ## Migration discipline
 

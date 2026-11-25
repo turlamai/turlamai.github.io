@@ -25,7 +25,8 @@ only per the internal-docs exemption).
   hackdigest, termpilot(n/a): website kits moved `docs/` → `site/`; Pages
   deployments switched to the workflow build type with `pages.yml`
   (legacy `main:/docs` cannot serve `site/`). regexmate needed a follow-up
-  commit to finish this — check pages deploy went green.
+  commit to finish this; its repository was later deleted by owner decision
+  (2026-11-25).
 - movebit: `Assets/` → `assets/`, `integration-tests/` folded, `packaging/`
   folded into `linux/`.
 - regexmate: engine grouped under `racket/` (core → racket/core,

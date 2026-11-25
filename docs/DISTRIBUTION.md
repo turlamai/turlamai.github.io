@@ -25,7 +25,7 @@ These are channel candidates, conditional on a product's actual supported platfo
 | Products | Initial route and next decision |
 | --- | --- |
 | Taskly, Fulcrum, Booklight | On supported macOS: signed/notarized website release first. On supported Windows: evaluate Store MSIX after the free pilot; keep direct delivery as the alternative. Paid Store rollout also requires the update-window compatibility gate below. |
-| PodLens, RegexMate, MoveBit | Stay free. Evaluate Windows Store MSIX where supported; Mac public binaries still need the same publisher-trust gate. RegexMate is the proposed first low-complexity Store candidate after its existing delivery gates pass, not a commitment to resume it now. |
+| PodLens, MoveBit | Stay free. Evaluate Windows Store MSIX where supported; Mac public binaries still need the same publisher-trust gate. |
 | Keyward | Stay free. Direct signed desktop release first; separately review secret custody, permissions and Store account eligibility before any listing. A local key organizer is not automatically an approved signing service or a safe production private-key store. |
 | gPTP Studio, Autarx, FlashPilot | Engineering-oriented direct/native distribution first, only on qualified platforms. Preserve Linux packages/CLI where supported; qualify hardware access, permissions and driver dependencies before proposing a Store channel. A simulator is not hardware acceptance. gPTP remains the commercial technical pilot, separate from the Windows Store pilot. |
 | HackDigest | Local/BYOK desktop channel follows the Mac/Windows rules above. Hosted rights and service billing are a separate future readiness gate. No Store listing is required to validate the backend. |

@@ -46,7 +46,7 @@ rivet.rktd  rivet-schema.json  rivet-acceptance.rktd  VERSION
 ```
 
 - `racket/` 是引擎，`app/` 是壳。引擎住进 `app/` 属命名缺陷（待办：keyward、podlens、threadly、relaypilot）。
-- `site/` 是官网根；`docs/` 只放文档。塞在 `docs/` 里的官网 kit 迁到 `site/`（待办：autarx、booklight、gptp-studio、movebit、regexmate、syncpilot、taskly、hackdigest）。迁移完成前 site-kit 的路径回退保其可用。
+- `site/` 是官网根；`docs/` 只放文档。塞在 `docs/` 里的官网 kit 迁到 `site/`（待办：autarx、booklight、gptp-studio、movebit、syncpilot、taskly、hackdigest）。迁移完成前 site-kit 的路径回退保其可用。
 - Linux-only 产品可省略 `macos-host/` 与 `windows/`，其本地生成物残渣保持 gitignore（syncpilot 先例）。
 - 根级清单：`rivet.rktd` 与 `VERSION` 必备。`rivet-schema.json` 默认入库，除非仓库声明它是 `raco rivet build` 重新生成的构建产物（autarx 先例）。有了验收场景后 `rivet-acceptance.rktd` 必备——绝不入库一份宣称了未运行场景的验收文件。
 - `VERSION` 是纯文本 `X.Y.Z`，是唯一发行身份。仓库可以把身份委托给 `rivet.rktd`，但必须有校验脚本强制一致（relaypilot 先例）。一个仓库出现两个互不隶属的版本号即是缺陷。
@@ -70,7 +70,7 @@ glaze.rktd  glaze-schema.json
 - `docs/` 命名：固定入口白名单保持大写——`README.md`、`USING.md`、`USER-GUIDE.md`、`DESIGN.md`、`CHANGELOG.md` 及其 `.zh-CN.md` 对；其余一律小写 kebab（`getting-started.zh-CN.md`）。存量混用目录在该文件下次内容改动时收敛，不要求批量重命名。
 - 包身份：`package.json` 的 `name` 等于仓库名；scoped 包每仓一个前缀（如 `@publy/*`）；一个仓库只有一个版本号真源。插件仓的 Obsidian id、显示名与仓库名对齐，或在文档里说明为何不同。
 - agent 技能目录统一 `skills/`（复数），每个技能一个子目录含 `SKILL.md`。
-- 生成物一律 gitignore。生成文件要入库，必须在旁边注释写明生成者与消费方（regexmate 的 `.rivet/generated/**` 目前缺——在其下次布局切片中补注释或挪位）。
+- 生成物一律 gitignore。生成文件要入库，必须在旁边注释写明生成者与消费方（已入库却缺注释的生成树，在其下次布局切片中补注释或挪位）。
 
 ## 迁移纪律
 
