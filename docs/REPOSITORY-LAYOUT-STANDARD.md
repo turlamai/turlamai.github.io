@@ -64,7 +64,8 @@ rivet.rktd  rivet-schema.json  rivet-acceptance.rktd  VERSION
 ```
 
 - `racket/` is the engine; `app/` is the shell. An engine living inside `app/`
-  is a naming defect (pending: keyward, podlens, threadly, relaypilot).
+  is a naming defect (pending: keyward, podlens, threadly; relaypilot's
+  engine moved to `racket/` with its glaze re-line).
 - `site/` is the website root; `docs/` holds documents only. Website kits
   inside `docs/` migrate to `site/` (pending: autarx, booklight, gptp-studio,
   movebit, syncpilot, taskly, hackdigest). Until migrated, the
@@ -78,7 +79,9 @@ rivet.rktd  rivet-schema.json  rivet-acceptance.rktd  VERSION
   scenarios that have not run.
 - `VERSION` is plain `X.Y.Z` text and the single release identity. A repository
   may delegate identity to `rivet.rktd` only when a check script enforces the
-  equivalence (relaypilot precedent). Two independent version strings in one
+  equivalence (autarx precedent; relaypilot was the precedent until it moved
+  to the glaze line and took a root `VERSION`,
+  turlamai/relaypilot#27). Two independent version strings in one
   repository are a defect.
 
 ## Glaze-line desktop product

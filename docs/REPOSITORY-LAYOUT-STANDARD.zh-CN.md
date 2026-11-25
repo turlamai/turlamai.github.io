@@ -45,11 +45,11 @@ linux/ windows/ macos-host/ flatpak/   # 平台腿，支持的每个平台一个
 rivet.rktd  rivet-schema.json  rivet-acceptance.rktd  VERSION
 ```
 
-- `racket/` 是引擎，`app/` 是壳。引擎住进 `app/` 属命名缺陷（待办：keyward、podlens、threadly、relaypilot）。
+- `racket/` 是引擎，`app/` 是壳。引擎住进 `app/` 属命名缺陷（待办：keyward、podlens、threadly；relaypilot 的引擎已随换线 glaze 迁入 `racket/`）。
 - `site/` 是官网根；`docs/` 只放文档。塞在 `docs/` 里的官网 kit 迁到 `site/`（待办：autarx、booklight、gptp-studio、movebit、syncpilot、taskly、hackdigest）。迁移完成前 site-kit 的路径回退保其可用。
 - Linux-only 产品可省略 `macos-host/` 与 `windows/`，其本地生成物残渣保持 gitignore（syncpilot 先例）。
 - 根级清单：`rivet.rktd` 与 `VERSION` 必备。`rivet-schema.json` 默认入库，除非仓库声明它是 `raco rivet build` 重新生成的构建产物（autarx 先例）。有了验收场景后 `rivet-acceptance.rktd` 必备——绝不入库一份宣称了未运行场景的验收文件。
-- `VERSION` 是纯文本 `X.Y.Z`，是唯一发行身份。仓库可以把身份委托给 `rivet.rktd`，但必须有校验脚本强制一致（relaypilot 先例）。一个仓库出现两个互不隶属的版本号即是缺陷。
+- `VERSION` 是纯文本 `X.Y.Z`，是唯一发行身份。仓库可以把身份委托给 `rivet.rktd`，但必须有校验脚本强制一致（autarx 先例；relaypilot 原为先例，换线 glaze 并补上根级 `VERSION` 后不再是，见 turlamai/relaypilot#27）。一个仓库出现两个互不隶属的版本号即是缺陷。
 
 ## glaze 线桌面产品
 
