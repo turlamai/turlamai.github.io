@@ -664,6 +664,7 @@ html[data-theme="dark"] .kit-card-icon { color: var(--kit-accent); }
     color: var(--kit-text-3);
     font-size: 12.5px;
 }
+.kit-footer-bottom a { color: inherit; font-size: inherit; }
 
 /* ---------- Prose (long-form / book pages) ---------- */
 .kit-prose {
