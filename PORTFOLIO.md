@@ -26,7 +26,7 @@ This is **not** a promise that every future edition will be free forever. Any fu
 | Automotive | Autarx, FlashPilot, gPTP Studio, Bitsmith | Semantic correctness, device/hardware evidence and secure engineering tools; no commercial licensing |
 | Community and free tools | Threadly, SyncPilot, Pitboard | Free community tools, accurately labeled; no paywalls |
 | Publishing | **Publy** | The only active commercial exception; preserve its current pricing/hosted service gates and open work |
-| Content | Racket Programming, Yinwang Blog Archive | Publication and attribution, not products to paywall |
+| Content | Racket Programming | Publication and attribution, not products to paywall |
 
 Bitsmith and Layerly are **early-stage products in direct development**, not verified packaged installers. Never use a "Download" CTA for a product without a real tested artifact. Each product owns its accurate maturity, platform, privacy, feedback and release details; the portal is an index, not runtime acceptance evidence.
 
@@ -36,6 +36,8 @@ Bitsmith and Layerly are **early-stage products in direct development**, not ver
 - **Fulcrum** stays quality-first on all three desktop platforms (macOS / Windows / Linux) — the family's only product supporting all three simultaneously, and that breadth is its identity. Reaching a stable three-platform experience remains its open challenge.
 - **Taskly / Booklight / PodLens** re-lined from rivet to glaze: engines, schemas and data formats survived; the UI is a single web implementation on the glaze carrier ([taskly#141](https://github.com/turlamai/taskly/issues/141), [booklight#75](https://github.com/turlamai/booklight/issues/75), [podlens#63](https://github.com/turlamai/podlens/issues/63)). Each shipped its version reset: Taskly `v0.1.0`, Booklight `v0.1.0`, PodLens `v0.1.1` — all three with macOS arm64/x64, Windows x64 and Linux x64/arm64 artifacts and a signed update feed.
 - Portal platform claims and Download CTAs were updated only after each reset release actually published (the "no Download CTA without a real tested artifact" rule held throughout). The portal cards now label Taskly / Booklight / PodLens as Glaze and MoveBit as macOS + Windows.
+
+InkVault (formerly Yinwang Blog Archive) is retired from the active portfolio by owner decision on 2026-11-26. Existing historical materials may be retained subject to copyright and correction/removal requests; no scheduled source crawl or product promotion.
 
 ## Shared libraries
 
