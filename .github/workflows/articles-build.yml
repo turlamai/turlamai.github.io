@@ -1,0 +1,47 @@
+name: Postly articles build
+on:
+  pull_request:
+    paths:
+      - 'writing/**'
+      - 'scripts/build-articles.sh'
+      - '.github/workflows/articles-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: turlamai/obsidian
+          path: deps/obsidian
+      - uses: actions/checkout@v4
+        with:
+          repository: turlamai/postly
+          ref: 12b18b396bea865425d20c887706e41ba8527322
+          path: deps/postly
+      - uses: Bogdanp/setup-racket@v1.11
+        with:
+          architecture: x64
+          distribution: full
+          variant: CS
+          version: stable
+      - name: Install engine
+        run: |
+          raco pkg install --auto --name obsidian --link "$GITHUB_WORKSPACE/deps/obsidian"
+          raco pkg install --auto --name postly --link "$GITHUB_WORKSPACE/deps/postly"
+      - name: Build isolated preview
+        run: |
+          bash scripts/build-articles.sh writing "$RUNNER_TEMP/articles"
+          mkdir -p "$RUNNER_TEMP/content/blog"
+          cp writing/postly.rkt "$RUNNER_TEMP/content/"
+          printf '# CI fixture\n\nNot for publication.\n' > "$RUNNER_TEMP/content/blog/2026-01-01-fixture.md"
+          bash scripts/build-articles.sh "$RUNNER_TEMP/content" "$RUNNER_TEMP/fixture-site"
+          test -s "$RUNNER_TEMP/fixture-site/blog/2026/01/01/fixture/index.html"
+          grep -F 'https://jrtx.site/articles' "$RUNNER_TEMP/fixture-site/sitemap.xml"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: articles-preview
+          path: ${{ runner.temp }}/articles
