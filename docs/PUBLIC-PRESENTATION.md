@@ -4,6 +4,10 @@
 
 Status: initial review and change-control standard, 2026-10-27. This complements [PRODUCT-STANDARD](PRODUCT-STANDARD.md), [HOME-PAGE-PLAN](HOME-PAGE-PLAN.md) and [DOCUMENTATION-LANGUAGES](DOCUMENTATION-LANGUAGES.md). Product repositories continue to own their own tested functionality, guides, release artifacts and normative contracts. Adopting this standard does **not** certify a product, translate every old page, or prove that a deployed page is fresh.
 
+## Concise product entry (owner decision 2026-11-27)
+
+The landing page introduces and routes; the application performs the task; the guide explains it. Within the first viewport, communicate one outcome, the primary action and any applicable price or availability constraint. Use a short supporting sentence, not repeated feature inventories, slogans or architecture sections. Commercial products expose verified buy, setup and start paths directly; free apps prioritize verified downloads or honest preview status; libraries prioritize installation, a minimal example and documentation. Keep required purchase prerequisites visible before payment. Put advanced configuration, troubleshooting and developer commands in linked documentation or progressive disclosure. Preserve the family theme, bilingual equivalence, accessibility and genuine release evidence. Review mobile and desktop screenshots, CTA destinations and actual deployed pages. Do not add paid offers outside the current portfolio authorization. Website work must not displace active Publy client implementation.
+
 ## Presentation architecture
 
 | Surface | Primary audience and job | Authoritative information |
