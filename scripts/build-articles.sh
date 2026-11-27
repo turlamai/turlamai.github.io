@@ -8,7 +8,10 @@ if [[ -e "$out" || -L "$out" ]]; then
   echo "Refusing to overwrite an existing output path: $out" >&2
   exit 1
 fi
-raco postly --out "$out" build "$content"
-test -s "$out/index.html"
-test -s "$out/feed.xml"
-test -s "$out/sitemap.xml"
+racket -l postly/main -- --out "$out" build "$content"
+for file in index.html feed.xml sitemap.xml; do
+  if [[ ! -s "$out/$file" ]]; then
+    echo "Missing or empty build output: $out/$file" >&2
+    exit 1
+  fi
+done
