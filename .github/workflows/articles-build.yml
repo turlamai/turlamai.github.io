@@ -32,9 +32,15 @@ jobs:
         run: |
           raco pkg install --auto --name obsidian --link "$GITHUB_WORKSPACE/deps/obsidian"
           raco pkg install --auto --name postly --link "$GITHUB_WORKSPACE/deps/postly"
+      - uses: actions/checkout@v4
+        with:
+          ref: articles-content
+          path: public-articles
+          persist-credentials: false
       - name: Build isolated preview
         run: |
-          bash scripts/build-articles.sh writing "$RUNNER_TEMP/articles"
+          cp writing/postly.rkt public-articles/postly.rkt
+          bash scripts/build-articles.sh public-articles "$RUNNER_TEMP/articles"
           mkdir -p "$RUNNER_TEMP/content/blog"
           cp writing/postly.rkt "$RUNNER_TEMP/content/"
           printf '# CI fixture\n\nNot for publication.\n' > "$RUNNER_TEMP/content/blog/2026-01-01-fixture.md"
