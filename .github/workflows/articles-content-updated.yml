@@ -1,0 +1,15 @@
+name: Postly content updated
+on:
+  push:
+    branches: [articles-content]
+    paths:
+      - 'blog/**'
+      - 'assets/**'
+      - '.github/workflows/articles-content-updated.yml'
+permissions: {}
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Signal that published content changed
+        run: echo "The public Articles source branch changed."
