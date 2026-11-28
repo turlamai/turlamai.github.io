@@ -5,9 +5,16 @@ on:
       - 'writing/**'
       - 'scripts/build-articles.sh'
       - '.github/workflows/articles-build.yml'
+  push:
+    branches: [master]
+  schedule:
+    - cron: '17,47 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: articles-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -56,3 +63,43 @@ jobs:
         with:
           name: articles-preview
           path: ${{ runner.temp }}/articles
+
+  deploy:
+    # Opt in only after switching the existing Pages source to GitHub Actions.
+    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && vars.POSTLY_PAGES_DEPLOY == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: articles-preview
+          path: ${{ runner.temp }}/generated-articles
+      - name: Assemble clean portal and generated articles
+        run: |
+          set -euo pipefail
+          stage="$RUNNER_TEMP/portal"
+          mkdir -p "$stage"
+          git archive HEAD | tar -x -C "$stage"
+          test -s "$RUNNER_TEMP/generated-articles/index.html"
+          rm -rf "$stage/articles"
+          mv "$RUNNER_TEMP/generated-articles" "$stage/articles"
+          rm -rf "$stage/.github" "$stage/writing" "$stage/scripts"
+          test -s "$stage/index.html"
+          test -s "$stage/articles/feed.xml"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/portal
+      - name: Deploy portal
+        id: deployment
+        uses: actions/deploy-pages@v4
