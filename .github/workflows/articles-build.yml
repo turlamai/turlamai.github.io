@@ -6,6 +6,10 @@ on:
   schedule:
     - cron: '17,47 * * * *'
   workflow_dispatch:
+  workflow_run:
+    workflows: [Postly content updated]
+    types: [completed]
+    branches: [articles-content]
 permissions:
   contents: read
 concurrency:
@@ -13,6 +17,11 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_repository.id == github.event.repository.id)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +52,8 @@ jobs:
           persist-credentials: false
       - name: Build isolated preview
         run: |
+          content_sha="$(git -C public-articles rev-parse HEAD)"
+          printf 'Articles content revision: `%s`\n' "$content_sha" >> "$GITHUB_STEP_SUMMARY"
           mkdir "$RUNNER_TEMP/public-content"
           for dir in blog assets; do
             source="public-articles/$dir"

@@ -18,7 +18,9 @@ python3 -m http.server 8000 --directory /tmp/jrtx-portal-preview
 
 Both output paths must be new. The assembled portal uses the current Git commit and replaces only the generated Articles subtree of the public site.
 
-The workflow builds the complete portal on pull requests, on `master` pushes, twice hourly and on manual dispatch. The `portal-preview` artifact includes the complete portal. With Pages set to GitHub Actions and the Actions variable `POSTLY_PAGES_DEPLOY=true`, production runs deploy that assembled portal. Changes to `articles-content` are picked up by the schedule or a manual run. GitHub can delay scheduled runs.
+The workflow builds the complete portal on pull requests, on `master` pushes, after content changes, on a twice-hourly fallback schedule and on manual dispatch. The `portal-preview` artifact includes the complete portal, and the run summary records the exact content commit. With Pages set to GitHub Actions and `POSTLY_PAGES_DEPLOY=true`, production runs deploy that assembled portal. GitHub can delay queued or scheduled runs.
+
+The `articles-content` branch carries a copy of `.github/workflows/articles-content-updated.yml`. GitHub runs it when a push changes `blog/`, `assets/` or that workflow file. The job runs without repository permissions and passes no files to the deployment. The production workflow runs from `master` and checks out the latest public content separately. When updating the notification workflow, keep its two copies in sync.
 
 A fresh deployment removes a withdrawn article from the homepage, its permalink, RSS and sitemap. Shared attachments, Git history and caches can still retain copies.
 
