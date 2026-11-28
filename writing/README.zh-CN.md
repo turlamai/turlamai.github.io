@@ -18,7 +18,9 @@ python3 -m http.server 8000 --directory /tmp/jrtx-portal-preview
 
 两个输出目录都须是新路径。整站产物以当前 Git 提交为底，只替换公开站点内由 Postly 生成的 Articles 目录。
 
-工作流在 PR、`master` 更新、每小时两次定时运行及手动触发时构建整站。`portal-preview` 包含完整站点。Pages 来源设为 GitHub Actions 且 Actions 变量为 `POSTLY_PAGES_DEPLOY=true` 时，生产运行会部署组装好的整站。`articles-content` 的改动由定时或手动运行拾取。GitHub 的定时运行可能延迟。
+工作流在 PR、`master` 更新、内容变更、每小时两次的兜底定时运行及手动触发时构建整站。`portal-preview` 包含完整站点，运行摘要会记录实际使用的内容提交。Pages 来源设为 GitHub Actions 且 `POSTLY_PAGES_DEPLOY=true` 时，生产运行会部署组装好的整站。GitHub 可能延迟排队或定时运行。
+
+`articles-content` 分支保有 `.github/workflows/articles-content-updated.yml` 的副本。推送涉及 `blog/`、`assets/` 或这个工作流文件时，GitHub 会运行该通知任务。任务不拥有仓库权限，也不向部署任务传递文件。生产工作流从 `master` 运行，并独立读取最新的公开内容。更新通知工作流时请同步两处副本。
 
 新部署会从首页、永久链接、RSS 和站点地图移除撤回的文章。共享附件、Git 历史和缓存中可能仍有副本。
 
