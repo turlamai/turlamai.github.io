@@ -47,6 +47,11 @@ jobs:
           bash scripts/build-articles.sh "$RUNNER_TEMP/content" "$RUNNER_TEMP/fixture-site"
           test -s "$RUNNER_TEMP/fixture-site/blog/2026/01/01/fixture/index.html"
           grep -F 'https://jrtx.site/articles' "$RUNNER_TEMP/fixture-site/sitemap.xml"
+          rm "$RUNNER_TEMP/content/blog/2026-01-01-fixture.md"
+          bash scripts/build-articles.sh "$RUNNER_TEMP/content" "$RUNNER_TEMP/withdrawn-site"
+          test ! -e "$RUNNER_TEMP/withdrawn-site/blog/2026/01/01/fixture/index.html"
+          ! grep -F '/fixture/' "$RUNNER_TEMP/withdrawn-site/feed.xml"
+          ! grep -F '/fixture/' "$RUNNER_TEMP/withdrawn-site/sitemap.xml"
       - uses: actions/upload-artifact@v4
         with:
           name: articles-preview
