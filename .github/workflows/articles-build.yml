@@ -1,10 +1,6 @@
 name: Postly articles build
 on:
   pull_request:
-    paths:
-      - 'writing/**'
-      - 'scripts/build-articles.sh'
-      - '.github/workflows/articles-build.yml'
   push:
     branches: [master]
   schedule:
@@ -23,6 +19,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: turlamai/obsidian
+          ref: db437b1aa823a207fe3425a9df7274cc8e0c0c64
           path: deps/obsidian
       - uses: actions/checkout@v4
         with:
@@ -46,23 +43,55 @@ jobs:
           persist-credentials: false
       - name: Build isolated preview
         run: |
-          cp writing/postly.rkt public-articles/postly.rkt
-          bash scripts/build-articles.sh public-articles "$RUNNER_TEMP/articles"
-          mkdir -p "$RUNNER_TEMP/content/blog"
-          cp writing/postly.rkt "$RUNNER_TEMP/content/"
-          printf '# CI fixture\n\nNot for publication.\n' > "$RUNNER_TEMP/content/blog/2026-01-01-fixture.md"
-          bash scripts/build-articles.sh "$RUNNER_TEMP/content" "$RUNNER_TEMP/fixture-site"
-          test -s "$RUNNER_TEMP/fixture-site/blog/2026/01/01/fixture/index.html"
-          grep -F 'https://jrtx.site/articles' "$RUNNER_TEMP/fixture-site/sitemap.xml"
-          rm "$RUNNER_TEMP/content/blog/2026-01-01-fixture.md"
-          bash scripts/build-articles.sh "$RUNNER_TEMP/content" "$RUNNER_TEMP/withdrawn-site"
-          test ! -e "$RUNNER_TEMP/withdrawn-site/blog/2026/01/01/fixture/index.html"
-          ! grep -F '/fixture/' "$RUNNER_TEMP/withdrawn-site/feed.xml"
-          ! grep -F '/fixture/' "$RUNNER_TEMP/withdrawn-site/sitemap.xml"
+          mkdir "$RUNNER_TEMP/public-content"
+          for dir in blog assets; do
+            source="public-articles/$dir"
+            if [[ -L "$source" ]]; then
+              echo "Unexpected symbolic link: $source" >&2
+              exit 1
+            fi
+            if [[ -d "$source" ]]; then
+              if [[ -n "$(find "$source" -type l -print -quit)" ]]; then
+                echo "Unexpected symbolic link in $source" >&2
+                exit 1
+              fi
+              cp -R "$source" "$RUNNER_TEMP/public-content/"
+            fi
+          done
+          cp writing/postly.rkt "$RUNNER_TEMP/public-content/"
+          bash scripts/build-articles.sh "$RUNNER_TEMP/public-content" "$RUNNER_TEMP/articles"
+      - name: Verify publish and withdrawal output
+        run: |
+          content="$RUNNER_TEMP/fixture-content"
+          article="$content/blog/2026-01-01-fixture.md"
+          page=blog/2026/01/01/fixture/index.html
+          mkdir -p "$content/blog" "$content/assets"
+          cp writing/postly.rkt "$content/"
+          printf '# CI fixture\n\n![](/assets/fixture.png)\n' > "$article"
+          printf 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a7/wAAAAASUVORK5CYII=' | base64 --decode > "$content/assets/fixture.png"
+          bash scripts/build-articles.sh "$content" "$RUNNER_TEMP/fixture-site"
+          grep -F 'src="/articles/assets/fixture.png"' "$RUNNER_TEMP/fixture-site/$page"
+          cmp "$content/assets/fixture.png" "$RUNNER_TEMP/fixture-site/assets/fixture.png"
+          for file in feed.xml sitemap.xml; do
+            grep -F 'https://jrtx.site/articles/blog/2026/01/01/fixture/' "$RUNNER_TEMP/fixture-site/$file"
+          done
+          rm "$article"
+          bash scripts/build-articles.sh "$content" "$RUNNER_TEMP/withdrawn-site"
+          test ! -e "$RUNNER_TEMP/withdrawn-site/$page"
+          if grep -F '/fixture/' "$RUNNER_TEMP/withdrawn-site/"{index.html,feed.xml,sitemap.xml}; then
+            echo "Withdrawn article is still listed" >&2
+            exit 1
+          fi
+      - name: Assemble full portal
+        run: bash scripts/assemble-portal.sh "$RUNNER_TEMP/articles" "$RUNNER_TEMP/portal"
       - uses: actions/upload-artifact@v4
         with:
-          name: articles-preview
-          path: ${{ runner.temp }}/articles
+          name: portal-preview
+          path: ${{ runner.temp }}/portal
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && vars.POSTLY_PAGES_DEPLOY == 'true'
+        with:
+          path: ${{ runner.temp }}/portal
 
   deploy:
     # Opt in only after switching the existing Pages source to GitHub Actions.
@@ -77,29 +106,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - uses: actions/download-artifact@v4
-        with:
-          name: articles-preview
-          path: ${{ runner.temp }}/generated-articles
-      - name: Assemble clean portal and generated articles
-        run: |
-          set -euo pipefail
-          stage="$RUNNER_TEMP/portal"
-          mkdir -p "$stage"
-          git archive HEAD | tar -x -C "$stage"
-          test -s "$RUNNER_TEMP/generated-articles/index.html"
-          rm -rf "$stage/articles"
-          mv "$RUNNER_TEMP/generated-articles" "$stage/articles"
-          rm -rf "$stage/.github" "$stage/writing" "$stage/scripts"
-          test -s "$stage/index.html"
-          test -s "$stage/articles/feed.xml"
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ runner.temp }}/portal
       - name: Deploy portal
         id: deployment
         uses: actions/deploy-pages@v4
