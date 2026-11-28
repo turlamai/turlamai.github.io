@@ -1,0 +1,111 @@
+name: Postly articles build
+on:
+  pull_request:
+  push:
+    branches: [master]
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: articles-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: turlamai/obsidian
+          ref: db437b1aa823a207fe3425a9df7274cc8e0c0c64
+          path: deps/obsidian
+      - uses: actions/checkout@v4
+        with:
+          repository: turlamai/postly
+          ref: 12b18b396bea865425d20c887706e41ba8527322
+          path: deps/postly
+      - uses: Bogdanp/setup-racket@v1.11
+        with:
+          architecture: x64
+          distribution: full
+          variant: CS
+          version: stable
+      - name: Install engine
+        run: |
+          raco pkg install --auto --name obsidian --link "$GITHUB_WORKSPACE/deps/obsidian"
+          raco pkg install --auto --name postly --link "$GITHUB_WORKSPACE/deps/postly"
+      - uses: actions/checkout@v4
+        with:
+          ref: articles-content
+          path: public-articles
+          persist-credentials: false
+      - name: Build isolated preview
+        run: |
+          mkdir "$RUNNER_TEMP/public-content"
+          for dir in blog assets; do
+            source="public-articles/$dir"
+            if [[ -L "$source" ]]; then
+              echo "Unexpected symbolic link: $source" >&2
+              exit 1
+            fi
+            if [[ -d "$source" ]]; then
+              if [[ -n "$(find "$source" -type l -print -quit)" ]]; then
+                echo "Unexpected symbolic link in $source" >&2
+                exit 1
+              fi
+              cp -R "$source" "$RUNNER_TEMP/public-content/"
+            fi
+          done
+          cp writing/postly.rkt "$RUNNER_TEMP/public-content/"
+          bash scripts/build-articles.sh "$RUNNER_TEMP/public-content" "$RUNNER_TEMP/articles"
+      - name: Verify publish and withdrawal output
+        run: |
+          content="$RUNNER_TEMP/fixture-content"
+          article="$content/blog/2026-01-01-fixture.md"
+          page=blog/2026/01/01/fixture/index.html
+          mkdir -p "$content/blog" "$content/assets"
+          cp writing/postly.rkt "$content/"
+          printf '# CI fixture\n\n![](/assets/fixture.png)\n' > "$article"
+          printf 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a7/wAAAAASUVORK5CYII=' | base64 --decode > "$content/assets/fixture.png"
+          bash scripts/build-articles.sh "$content" "$RUNNER_TEMP/fixture-site"
+          grep -F 'src="/articles/assets/fixture.png"' "$RUNNER_TEMP/fixture-site/$page"
+          cmp "$content/assets/fixture.png" "$RUNNER_TEMP/fixture-site/assets/fixture.png"
+          for file in feed.xml sitemap.xml; do
+            grep -F 'https://jrtx.site/articles/blog/2026/01/01/fixture/' "$RUNNER_TEMP/fixture-site/$file"
+          done
+          rm "$article"
+          bash scripts/build-articles.sh "$content" "$RUNNER_TEMP/withdrawn-site"
+          test ! -e "$RUNNER_TEMP/withdrawn-site/$page"
+          if grep -F '/fixture/' "$RUNNER_TEMP/withdrawn-site/"{index.html,feed.xml,sitemap.xml}; then
+            echo "Withdrawn article is still listed" >&2
+            exit 1
+          fi
+      - name: Assemble full portal
+        run: bash scripts/assemble-portal.sh "$RUNNER_TEMP/articles" "$RUNNER_TEMP/portal"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: portal-preview
+          path: ${{ runner.temp }}/portal
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && vars.POSTLY_PAGES_DEPLOY == 'true'
+        with:
+          path: ${{ runner.temp }}/portal
+
+  deploy:
+    # Opt in only after switching the existing Pages source to GitHub Actions.
+    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && vars.POSTLY_PAGES_DEPLOY == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy portal
+        id: deployment
+        uses: actions/deploy-pages@v4

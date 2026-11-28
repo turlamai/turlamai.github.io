@@ -34,7 +34,7 @@ jobs:
               if (branch.name === defaultBranch || branch.protected) { retained++; continue; }
               // Release, deployment and upstream/history refs can remain useful
               // even after their original PR merged. Never auto-delete them.
-              const keepNames = new Set(["gh-pages", "develop", "development", "dev", "stable", "staging", "production"]);
+              const keepNames = new Set(["articles-content", "gh-pages", "develop", "development", "dev", "stable", "staging", "production"]);
               const keepPrefixes = ["release/", "hotfix/", "support/", "maintenance/", "deploy/", "pages/", "upstream/", "vendor/", "archive/"];
               if (keepNames.has(branch.name) || keepPrefixes.some(prefix => branch.name.startsWith(prefix))) {
                 retained++;
