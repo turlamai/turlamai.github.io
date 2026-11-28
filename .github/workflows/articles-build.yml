@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: turlamai/postly
-          ref: 12b18b396bea865425d20c887706e41ba8527322
+          ref: 7c212a7fd479139383e9c836bc9134a55fcfe77a
           path: deps/postly
       - uses: Bogdanp/setup-racket@v1.11
         with:
